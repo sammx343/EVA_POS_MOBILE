@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:id="@+id/loadingText"
-        android:textSize="20sp"
+        android:textSize="35sp"
         android:text="Cargando"/>
     <TextView
         android:layout_width="wrap_content"
@@ -16,6 +16,6 @@
         android:layout_alignBaseline="@+id/loadingText"
         android:layout_toRightOf="@+id/loadingText"
         android:id="@+id/loading"
-        android:textSize="20sp"
+        android:textSize="35sp"
         android:text="..."/>
 </RelativeLayout>

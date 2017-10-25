@@ -81,7 +81,7 @@ public class LoadDevices extends AppCompatActivity {
                         @Override
                         public void run() {
                             TypeWritter tc = new TypeWritter();
-                            tc.animateText("....", 300, loadingText, "*Espere mientras se cargan los dispositivos");
+                            tc.animateText(" ...", 300, loadingText, "*Espere mientras se cargan los dispositivos");
 
                             //Si un solo dispositivo no está listo, [-], devicesReady se vuelve falso
                             devicesReady = true;
