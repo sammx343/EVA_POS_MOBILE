@@ -9,7 +9,8 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:id="@+id/mainLayout"
-    android:weightSum="5">
+    android:weightSum="5"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:id="@+id/buttons_fragment"
@@ -30,7 +31,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="@color/colorPrimary"
             android:orientation="vertical"
             android:weightSum="5">
 
@@ -211,15 +211,13 @@
                         android:layout_marginStart="2dp"
                         android:text="ESC"
                         android:gravity="center"
-                        android:textSize="22sp"
-                        android:onClick="onButtonClicked" />
+                        android:textSize="22sp" />
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/optionButton"
-                        android:layout_marginStart="2dp"
-                        android:onClick="onButtonClicked" />
+                        android:layout_marginStart="2dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -265,15 +263,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/specialColorText"
-                        android:layout_marginStart="2dp"
-                        android:onClick="onButtonClicked" />
+                        android:layout_marginStart="2dp" />
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/optionButton"
-                        android:layout_marginStart="2dp"
-                        android:onClick="onButtonClicked" />
+                        android:layout_marginStart="2dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -323,7 +319,6 @@
                         android:text="x"
                         android:gravity="center"
                         android:textSize="35sp"
-                        android:onClick="onButtonClicked"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -371,7 +366,6 @@
                         android:layout_weight="2"
                         android:background="@color/optionButton"
                         android:layout_marginStart="2dp"
-                        android:onClick="onButtonClicked"
                         />
                 </LinearLayout>
             </LinearLayout>

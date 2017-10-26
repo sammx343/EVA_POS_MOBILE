@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -10,28 +9,28 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:id="@+id/mainLayout"
-    android:weightSum="5">
+    android:weightSum="5"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:id="@+id/buttons_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_weight="7"
         android:orientation="horizontal">
 
         <fragment
             android:id="@+id/fragment"
             android:name="com.example.smayor.myapplication.ButtonsFragment"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_buttons"
-            android:layout_weight="2"/>
+            android:layout_weight="5"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:background="@color/colorPrimary"
+            android:layout_weight="2"
             android:orientation="vertical"
             android:weightSum="5">
 
@@ -57,6 +56,7 @@
                         android:text="Ingresar Artículo"
                         android:textSize="20sp"/>
                     <TextView
+                        android:id="@+id/articleCode"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border"
@@ -161,6 +161,7 @@
                 android:orientation="vertical"
                 android:layout_weight="3"
                 android:weightSum="4"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp">
 
                 <LinearLayout
@@ -168,136 +169,213 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="5">
+                    android:weightSum="5"
+                    android:layout_marginBottom="1dp">
 
-                    <TextView
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"
                         />
-                    <TextView
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="2"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked" />
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="3"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked" />
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:src="@drawable/btn_esc"
+                        android:scaleType="fitCenter"
+                        android:background="@color/cancelButton"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center"/>
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
+                        android:src="@drawable/btn_up"
+                        android:scaleType="fitCenter"
+                        android:background="@color/optionButton"
+                        android:layout_marginStart="2dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="5">
+                    android:weightSum="5"
+                    android:layout_marginBottom="1dp">
 
-                    <TextView
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="4"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"
                         />
-                    <TextView
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="5"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked" />
+                    <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="6"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked" />
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
+                        android:src="@drawable/btn_bcsp"
+                        android:scaleType="fitCenter"
+                        android:background="@color/specialColorText"
+                        android:layout_marginStart="2dp"
+                        android:onClick="deleteCharacter"/>
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
+                        android:src="@drawable/btn_down"
+                        android:scaleType="fitCenter"
+                        android:background="@color/optionButton"
+                        android:layout_marginStart="2dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="5">
+                    android:weightSum="5"
+                    android:layout_marginBottom="1dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="7"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"
                         />
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="8"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"/>
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="9"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"/>
+                    <ImageButton
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
+                        android:layout_weight="2"
+                        android:src="@drawable/btn_multi"
+                        android:scaleType="fitCenter"
+                        android:background="@color/optionButton"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="5">
+                    android:weightSum="5"
+                    android:layout_marginBottom="1dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"
                         />
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="00"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"/>
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="2dp"
+                        android:text="."
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:onClick="onButtonClicked"/>
+                    <ImageButton
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark" />
+                        android:layout_weight="2"
+                        android:src="@drawable/btn_enter"
+                        android:scaleType="fitCenter"
+                        android:background="@color/optionButton"
+                        android:layout_marginStart="2dp"
+                        />
                 </LinearLayout>
             </LinearLayout>
 

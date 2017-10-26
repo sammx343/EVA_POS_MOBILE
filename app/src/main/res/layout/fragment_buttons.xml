@@ -7,5 +7,794 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/preparadasButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_bebida_preparada"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="PREPARADAS"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/consumoButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_consumo"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="CONSUMO"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/panaderiaButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_panaderia_"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="PANADERÍA"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otrosButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_otros"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="OTROS"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/hojaldresButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_panaderia"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="PANADERÍA"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/reposteriaButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_reposteria"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="REPOSTERÍA"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/cocinaButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_cocina"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="PANADERÍA"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/lacteosButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_bebida_refri"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="LACTEOS"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/neveraButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/categorias_nevera"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="NEVERA"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:text="No Venta"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:text="Cons Precio"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:text="Devolución"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:text="Cons Dev"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@color/botoneraButtonColor"/>
+
+            <LinearLayout
+                android:id="@+id/cancelButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/ico_cancelar"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="CANCELAR"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payButton"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginRight="3dp"
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/ico_pagar"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="PAGAR"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
