@@ -3,4 +3,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="preparadas">PREPARADAS</string>
+    <string name="consumo">CONSUMO</string>
+    <string name="panader_a">PANADERÍA</string>
+    <string name="otros">OTROS</string>
+    <string name="hojaldres">HOJALDRES</string>
+    <string name="reposter_a">REPOSTERÍA</string>
+    <string name="cocina">COCINA</string>
+    <string name="lacteos">LACTEOS</string>
+    <string name="nevera">NEVERA</string>
+    <string name="no_venta">No Venta</string>
+    <string name="cons_precio">Cons Precio</string>
+    <string name="devoluci_n">Devolución</string>
+    <string name="canc_item">Canc Item</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="pagar">PAGAR</string>
 </resources>

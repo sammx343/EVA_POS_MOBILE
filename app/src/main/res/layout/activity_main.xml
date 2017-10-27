@@ -19,13 +19,12 @@
         android:layout_weight="7"
         android:orientation="horizontal">
 
-        <fragment
-            android:id="@+id/fragment"
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:name="com.example.smayor.myapplication.ButtonsFragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_buttons"
-            android:layout_weight="5"/>
+            android:layout_weight="5" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -40,45 +39,45 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:orientation="vertical"
                 android:layout_weight="2"
+                android:orientation="vertical"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ingresar Artículo"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:id="@+id/articleCode"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/border"
-                        android:textColor="@color/colorText"
-                        android:textSize="20sp"
                         android:padding="5dp"
-                        android:layout_marginTop="5dp"/>
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="25sp"
                         android:layout_marginTop="5dp"
                         android:gravity="right"
                         android:text="$0"
-                        />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Precio"
-                        android:textColor="@color/specialColorText"/>
+                        android:textColor="@color/specialColorText" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -90,20 +89,23 @@
                             android:layout_height="match_parent"
                             android:layout_weight="4"
                             android:text="CANT"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
                             android:text="ARTÍCULO"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="4"
                             android:text="VALOR"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
@@ -115,10 +117,12 @@
                         android:layout_weight="1">
 
                     </android.support.v4.widget.NestedScrollView>
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
                         android:background="#FFFFFF" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -128,26 +132,28 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ITEMS"
-                            android:layout_weight="5"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TOTAL"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="$0"
-                            android:textSize="20sp"
-                            android:gravity="right|bottom"
-                            android:layout_weight="3"/>
+                            android:layout_weight="1"
+                            android:text="0" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:text="ITEMS" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TOTAL" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right|bottom"
+                            android:text="$0"
+                            android:textSize="20sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -158,231 +164,241 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="3"
-                android:weightSum="4"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:weightSum="4">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:weightSum="5"
-                    android:layout_marginBottom="1dp">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="1"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"
-                        />
+                        android:textSize="30sp" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="2"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked" />
+                        android:textSize="30sp" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="3"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked" />
+                        android:textSize="30sp" />
+
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
-                        android:src="@drawable/btn_esc"
-                        android:scaleType="fitCenter"
                         android:background="@color/cancelButton"
-                        android:layout_marginStart="2dp"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_esc" />
+
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
-                        android:src="@drawable/btn_up"
-                        android:scaleType="fitCenter"
                         android:background="@color/optionButton"
-                        android:layout_marginStart="2dp" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_up" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:weightSum="5"
-                    android:layout_marginBottom="1dp">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="4"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"
-                        />
+                        android:textSize="30sp" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="5"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked" />
+                        android:textSize="30sp" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="6"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked" />
+                        android:textSize="30sp" />
+
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
-                        android:src="@drawable/btn_bcsp"
-                        android:scaleType="fitCenter"
                         android:background="@color/specialColorText"
-                        android:layout_marginStart="2dp"
-                        android:onClick="deleteCharacter"/>
+                        android:onClick="deleteCharacter"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_bcsp" />
+
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
-                        android:src="@drawable/btn_down"
-                        android:scaleType="fitCenter"
                         android:background="@color/optionButton"
-                        android:layout_marginStart="2dp" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_down" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:weightSum="5"
-                    android:layout_marginBottom="1dp">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
 
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
                         android:text="7"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"
-                        />
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
-                        android:text="8"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
-                        android:text="9"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"/>
-                    <ImageButton
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:src="@drawable/btn_multi"
-                        android:scaleType="fitCenter"
-                        android:background="@color/optionButton"
-                        android:layout_marginStart="2dp"
-                        android:gravity="center"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1"
-                    android:weightSum="5"
-                    android:layout_marginBottom="1dp">
+                        android:textSize="30sp" />
 
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
-                        android:text="0"
                         android:gravity="center"
-                        android:textSize="30sp"
                         android:onClick="onButtonClicked"
-                        />
+                        android:text="8"
+                        android:textSize="30sp" />
+
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
                         android:layout_weight="1"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
-                        android:text="00"
                         android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_marginStart="2dp"
-                        android:text="."
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:onClick="onButtonClicked"/>
+                        android:onClick="onButtonClicked"
+                        android:text="9"
+                        android:textSize="30sp" />
+
                     <ImageButton
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:src="@drawable/btn_enter"
-                        android:scaleType="fitCenter"
-                        android:background="@color/optionButton"
                         android:layout_marginStart="2dp"
-                        />
+                        android:layout_weight="2"
+                        android:background="@color/optionButton"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_multi" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
+                        android:text="0"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
+                        android:text="00"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:onClick="onButtonClicked"
+                        android:text="."
+                        android:textSize="30sp" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="2"
+                        android:background="@color/optionButton"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_enter" />
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>

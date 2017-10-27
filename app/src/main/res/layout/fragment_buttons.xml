@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"
                 />
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -81,7 +81,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_bebida_preparada"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -89,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="PREPARADAS"
+                    android:text="@string/preparadas"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -108,7 +108,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_consumo"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -116,7 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="CONSUMO"
+                    android:text="@string/consumo"
                     android:gravity="center"/>
             </LinearLayout>
         </LinearLayout>
@@ -130,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -138,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -146,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -189,7 +189,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_panaderia_"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -197,7 +197,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="PANADERÍA"
+                    android:text="@string/panader_a"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -216,7 +216,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_otros"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -224,7 +224,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="OTROS"
+                    android:text="@string/otros"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -239,7 +239,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -247,7 +247,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -255,7 +255,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -263,7 +263,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -271,7 +271,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -279,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -289,7 +289,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -298,7 +298,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_panaderia"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -306,7 +306,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="PANADERÍA"
+                    android:text="@string/hojaldres"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -314,7 +314,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -329,7 +329,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -337,7 +337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -345,7 +345,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -353,7 +353,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -361,7 +361,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -369,7 +369,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -379,7 +379,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -388,7 +388,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_reposteria"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -396,7 +396,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="REPOSTERÍA"
+                    android:text="@string/reposter_a"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -404,7 +404,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -419,7 +419,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -427,7 +427,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -435,7 +435,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -443,7 +443,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -451,7 +451,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -459,7 +459,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -469,7 +469,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -478,7 +478,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_cocina"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -486,7 +486,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="PANADERÍA"
+                    android:text="@string/cocina"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -494,7 +494,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -509,7 +509,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -517,7 +517,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -525,7 +525,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -533,7 +533,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -541,7 +541,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -549,7 +549,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -559,7 +559,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -568,7 +568,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_bebida_refri"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -576,7 +576,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="LACTEOS"
+                    android:text="@string/lacteos"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -584,7 +584,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -599,7 +599,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -607,7 +607,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -615,7 +615,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -623,7 +623,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -631,7 +631,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -639,7 +639,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -649,7 +649,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -658,7 +658,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/categorias_nevera"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -666,7 +666,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="NEVERA"
+                    android:text="@string/nevera"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -674,7 +674,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -695,22 +695,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/noSell"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
-                android:text="No Venta"
+                android:layout_marginEnd="3dp"
+                android:text="@string/no_venta"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -718,8 +719,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
-                android:text="Cons Precio"
+                android:layout_marginEnd="3dp"
+                android:text="@string/cons_precio"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -727,8 +728,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
-                android:text="Devolución"
+                android:layout_marginEnd="3dp"
+                android:text="@string/devoluci_n"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -736,8 +737,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
-                android:text="Cons Dev"
+                android:layout_marginEnd="3dp"
+                android:text="@string/canc_item"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
@@ -747,7 +748,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -756,7 +757,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/ico_cancelar"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -764,7 +765,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="CANCELAR"
+                    android:text="@string/cancelar"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -774,7 +775,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:background="@color/botoneraButtonColor"
                 android:orientation="vertical"
                 android:clickable="true">
@@ -783,7 +784,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:src="@drawable/ico_pagar"
                     android:scaleType="fitCenter"
                     android:background="@color/botoneraButtonColor" />
@@ -791,7 +792,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="PAGAR"
+                    android:text="@string/pagar"
                     android:gravity="center"/>
             </LinearLayout>
         </LinearLayout>

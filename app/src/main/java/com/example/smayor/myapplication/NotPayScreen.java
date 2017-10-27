@@ -7,51 +7,30 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ButtonsFragment.OnFragmentInteractionListener} interface
+ * {@link NotPayScreen.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class ButtonsFragment extends Fragment {
+public class NotPayScreen extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ButtonsFragment() {
+    public NotPayScreen() {
         // Required empty public constructor
     }
 
-    LinearLayout cancelButton;
-    Button noSell;
-    View self;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View rootView = inflater.inflate(R.layout.fragment_buttons, container, false);
-        cancelButton = (LinearLayout) rootView.findViewById(R.id.cancelButton);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), " Cancel ", Toast.LENGTH_LONG).show();
-            }
-        });
-        self = rootView;
-        noSell = (Button) rootView.findViewById(R.id.noSell);
-        noSell.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NotPayScreen payScreen = new NotPayScreen();
-                ((MainActivity) getActivity()).replaceFragments(payScreen);
-            }
-        });
-        return rootView;
+        Toast.makeText(getContext(),"HEYYY deberia inflata" , Toast.LENGTH_SHORT).show();
+        return inflater.inflate(R.layout.fragment_not_pay_screen, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -67,8 +46,6 @@ public class ButtonsFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -77,6 +54,7 @@ public class ButtonsFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     /**
      * This interface must be implemented by activities that contain this
