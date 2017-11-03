@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".LoadDevices" />
         <activity android:name=".Login" />
+        <activity android:name=".SellPanel" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".Login2" />
+        <activity android:name=".Login3" />
+        <activity android:name=".MainActivity2"></activity>
     </application>
 
 </manifest>

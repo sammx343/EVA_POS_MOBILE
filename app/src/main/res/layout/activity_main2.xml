@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/sell"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Venta"
+            android:textSize="30sp"
+            android:background="@color/botoneraButtonColor"
+            android:layout_marginBottom="35dp"/>
+        <Button
+            android:id="@+id/configuration"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Configurar"
+            android:textSize="30sp"
+            android:background="@color/botoneraButtonColor"
+            android:layout_marginBottom="35dp"
+            android:onClick="changeView"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Bloquear"
+            android:textSize="30sp"
+            android:background="@color/botoneraButtonColor"
+            android:layout_marginBottom="35dp"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Salir"
+            android:textSize="30sp"
+            android:background="@color/botoneraButtonColor"
+            android:layout_marginBottom="35dp"/>
+    </LinearLayout>
+</RelativeLayout>

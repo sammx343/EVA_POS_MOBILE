@@ -5,23 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class Login2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login3);
     }
 
-    public void sell(View view) {
+    public void login(View view) {
         Intent intent;
-        intent = new Intent(getApplicationContext(), SellPanel.class);
+        intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 
-    public void changeView(View view) {
+    public void exit2(View view) {
         Intent intent;
-        intent = new Intent(getApplicationContext(), MainActivity2.class);
+        intent = new Intent(getApplicationContext(), Login3.class);
         startActivity(intent);
     }
 }

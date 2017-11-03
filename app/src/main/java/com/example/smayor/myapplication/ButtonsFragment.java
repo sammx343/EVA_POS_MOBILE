@@ -48,7 +48,7 @@ public class ButtonsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NotPayScreen payScreen = new NotPayScreen();
-                ((MainActivity) getActivity()).replaceFragments(payScreen);
+                ((SellPanel) getActivity()).replaceFragments(payScreen);
             }
         });
         return rootView;

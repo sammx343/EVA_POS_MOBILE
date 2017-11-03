@@ -118,7 +118,7 @@ public class LoadDevices extends AppCompatActivity {
     }
 
     public void changeDeviceText(final TextView textView){
-        int Result = randomNumber(4000, 10000);
+        int Result = randomNumber(1000, 4000);
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {

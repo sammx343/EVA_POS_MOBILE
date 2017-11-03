@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="700dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="4">
+        <Button
+            android:id="@+id/sell"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:text="Venta"
+            android:textSize="30sp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:id="@+id/configuration"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:text="Configurar"
+            android:textSize="30sp"
+            android:layout_marginBottom="0dp"
+            android:onClick="changeView"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:text="Bloquear"
+            android:textSize="30sp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:text="Salir"
+            android:textSize="30sp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+</RelativeLayout>
