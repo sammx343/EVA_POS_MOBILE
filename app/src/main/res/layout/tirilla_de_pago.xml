@@ -9,28 +9,34 @@
         android:weightSum="10">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="2"
             android:text="CANT"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="5"
             android:text="ARTÍCULO"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:text="VALOR"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#FFFFFF" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -39,15 +45,13 @@
 
     </android.support.v4.widget.NestedScrollView>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dip"
-        android:background="#FFFFFF" />
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dip"
-        android:background="#FFFFFF" />
-
+    <Button
+        android:id="@+id/backToPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ocultar"
+        android:textSize="20sp"
+        android:background="@color/colorPrimaryDark"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

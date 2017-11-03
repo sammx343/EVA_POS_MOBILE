@@ -1,62 +1,46 @@
 package com.example.smayor.myapplication;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ButtonsFragment.OnFragmentInteractionListener} interface
+ * {@link TirillaDePagoFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
+ * create an instance of this fragment.
  */
-public class ButtonsFragment extends Fragment {
+public class TirillaDePagoFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ButtonsFragment() {
+    public TirillaDePagoFragment() {
         // Required empty public constructor
     }
 
-    LinearLayout cancelButton;
-    Button noSell;
+    Button backToPanel;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View rootView = inflater.inflate(R.layout.fragment_buttons, container, false);
-        cancelButton = (LinearLayout) rootView.findViewById(R.id.cancelButton);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), " Cancel ", Toast.LENGTH_LONG).show();
-            }
-        });
-        noSell = (Button) rootView.findViewById(R.id.noSell);
-        noSell.setOnClickListener(new View.OnClickListener() {
+        View rootView = inflater.inflate(R.layout.tirilla_de_pago, container, false);
+        backToPanel = (Button) rootView.findViewById(R.id.backToPanel);
+        final Fragment myFrag = this;
+        backToPanel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NotPayScreen payScreen = new NotPayScreen();
-                ((SellPanel) getActivity()).replaceFragments(payScreen, R.id.fragment_container);
+                ButtonsFragment buttonsFragment = new ButtonsFragment();
+                ((SellPanel) getActivity()).removeFragment(myFrag);
             }
         });
         return rootView;
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
     }
 
     @Override
