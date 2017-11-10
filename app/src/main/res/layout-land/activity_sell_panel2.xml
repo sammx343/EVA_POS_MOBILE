@@ -18,31 +18,24 @@
         android:layout_height="match_parent"
         android:layout_weight="19"
         android:weightSum="27"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <FrameLayout
-            android:id="@+id/fragment_container"
-            android:name="com.example.smayor.myapplication.ButtonsFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="18" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="9"
             android:id="@+id/panel">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginRight="5dp"
                 android:weightSum="15">
 
                 <FrameLayout
                     android:id="@+id/operatorView"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
@@ -53,8 +46,8 @@
                 </FrameLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="8"
@@ -71,14 +64,19 @@
             </LinearLayout>
         </FrameLayout>
 
-
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:name="com.example.smayor.myapplication.ButtonsFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="18" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/fragment_composition"
         android:layout_weight="1"
-        android:gravity="right">
+        android:gravity="left">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

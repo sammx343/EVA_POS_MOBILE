@@ -8,9 +8,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
         android:layout_weight="7"
         android:weightSum="11"
         android:background="@color/colorPrimary"
@@ -21,7 +18,7 @@
             android:layout_height="0dp"
             android:text="INGRESAR ARTÍCULO"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/articleCode"
@@ -64,26 +61,33 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_weight="2">
-            <LinearLayout
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="addTirilloDePagoFragment"
+            android:background="@color/colorPrimaryDark"
+            android:weightSum="10">
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/categorias_ico_next"
-                    android:background="@drawable/shape"/>
-            </LinearLayout>
-
+                android:src="@drawable/ico_articulos"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
             <TextView
-                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:text="9999"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="left|center"
+                android:layout_weight="3"/>
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
                 android:text="TOTAL: $2900"
                 android:textStyle="bold"
-                android:textSize="24sp"
-                android:gravity="right|bottom"/>
+                android:textSize="22sp"
+                android:gravity="left|center"
+                android:layout_weight="6"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -1,31 +1,23 @@
 package com.example.smayor.myapplication;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * {@link OperatorViewFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link OperatorViewFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class OperatorViewFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    TextView articleCode;
 
     private OnFragmentInteractionListener mListener;
 
@@ -33,38 +25,30 @@ public class OperatorViewFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OperatorViewFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static OperatorViewFragment newInstance(String param1, String param2) {
-        OperatorViewFragment fragment = new OperatorViewFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public void updateText(String newText){
+        String oldText = articleCode.getText().toString();
+        int articleCodeLength = (oldText+newText).length();
+        if(articleCodeLength<20)
+            articleCode.setText(oldText+newText);
+        else
+            Toast.makeText(getContext(), "No se pueden colocar más números", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public void deleteCharacter() {
+        int articleCodeLength = articleCode.getText().length();
+        if(articleCodeLength>0){
+            String newText = articleCode.getText().toString().substring(0, articleCodeLength - 1);
+            articleCode.setText(newText);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_operator_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_operator_view, container, false);
+
+        articleCode = (TextView) rootView.findViewById(R.id.articleCode);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -23,15 +23,6 @@
                 android:layout_weight="0.5"
                 android:layout_marginEnd="3dp"
                 style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
             <Button
@@ -125,14 +116,6 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:layout_marginTop="3dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -275,14 +258,6 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
             <LinearLayout
                 android:id="@+id/hojaldresButton"
                 android:padding="2dp"
@@ -310,13 +285,32 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-            <Button
+            <LinearLayout
+                android:id="@+id/neveraButton"
+                android:padding="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
+                android:background="@color/botoneraButtonColor"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="3dp"
+                    android:src="@drawable/categorias_nevera"
+                    android:scaleType="fitCenter"
+                    android:background="@color/botoneraButtonColor" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="@string/nevera"
+                    android:gravity="center"/>
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
@@ -324,14 +318,6 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:layout_marginTop="3dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -455,14 +441,6 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
             <LinearLayout
                 android:id="@+id/cocinaButton"
                 android:padding="2dp"
@@ -545,14 +523,6 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="@color/botoneraButtonColor"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
             <LinearLayout
                 android:id="@+id/lacteosButton"
                 android:padding="2dp"
@@ -589,108 +559,12 @@
                 android:background="@color/botoneraButtonColor"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:layout_marginTop="3dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-
-            <LinearLayout
-                android:id="@+id/neveraButton"
-                android:padding="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                android:background="@color/botoneraButtonColor"
-                android:orientation="vertical"
-                android:clickable="true">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="3dp"
-                    android:src="@drawable/categorias_nevera"
-                    android:scaleType="fitCenter"
-                    android:background="@color/botoneraButtonColor" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:text="@string/nevera"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="@color/botoneraButtonColor"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:layout_marginTop="3dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:layout_marginEnd="3dp"
-                style="?android:attr/buttonBarButtonStyle"/>
 
             <TextView
                 android:layout_width="match_parent"

@@ -1,32 +1,33 @@
 package com.example.smayor.myapplication;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NumberPadFragment extends Fragment {
 
-    public interface PayChange{
-        public void sendText(String text);
-        public void deleteCharacter();
-    }
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link PanelDePagoFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ */
+public class PanelDePagoFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public NumberPadFragment() {
+    public PanelDePagoFragment() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_number_pad, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_panel_de_pago, container, false);
+        return rootView;
     }
 
     @Override
@@ -47,6 +48,7 @@ public class NumberPadFragment extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

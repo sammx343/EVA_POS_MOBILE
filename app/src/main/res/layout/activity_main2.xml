@@ -16,7 +16,8 @@
             android:text="Venta"
             android:textSize="30sp"
             android:background="@color/botoneraButtonColor"
-            android:layout_marginBottom="35dp"/>
+            android:layout_marginBottom="35dp"
+            android:onClick="sell"/>
         <Button
             android:id="@+id/configuration"
             android:layout_width="350dp"
@@ -24,15 +25,17 @@
             android:text="Configurar"
             android:textSize="30sp"
             android:background="@color/botoneraButtonColor"
-            android:layout_marginBottom="35dp"
-            android:onClick="changeView"/>
+            android:onClick="configuration"
+            android:layout_marginBottom="35dp"/>
         <Button
+            android:id="@+id/change"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:text="Bloquear"
+            android:text="Cambiar"
             android:textSize="30sp"
             android:background="@color/botoneraButtonColor"
-            android:layout_marginBottom="35dp"/>
+            android:layout_marginBottom="35dp"
+            android:onClick="changeView"/>
         <Button
             android:layout_width="350dp"
             android:layout_height="80dp"

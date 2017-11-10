@@ -22,7 +22,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Login2" />
         <activity android:name=".Login3" />
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".ConfigurationScreen"></activity>
     </application>
 
 </manifest>

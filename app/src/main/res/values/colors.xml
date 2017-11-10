@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#999999</color>
+    <color name="colorPrimaryDark">#4d4d4d</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorText">#FFFFFF</color>
-    <color name="botoneraButtonColor">#4d4d4d</color>
+    <color name="botoneraButtonColor">#595959</color>
     <color name="specialColorText">#eaa759</color>
     <color name="cancelButton">#F08080</color>
     <color name="optionButton">#5FA69B</color>

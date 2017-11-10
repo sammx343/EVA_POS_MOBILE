@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -9,14 +8,15 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:id="@+id/mainLayout"
-    android:weightSum="5"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:weightSum="20">
 
     <LinearLayout
-        android:id="@+id/buttons_fragment"
+        android:id="@+id/fragment_composition"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:weightSum="27"
+        android:layout_weight="19"
         android:orientation="horizontal">
 
         <FrameLayout
@@ -36,114 +36,42 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
                 android:weightSum="15">
 
-                <LinearLayout
+                <FrameLayout
+                    android:id="@+id/operatorView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
                     android:layout_weight="7"
                     android:weightSum="11"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:text="INGRESAR ARTÍCULO"
-                        android:layout_weight="1"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/articleCode"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/border"
-                        android:gravity="bottom"
-                        android:padding="2dp"
-                        android:text="123455664"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorText"
-                        android:textSize="27sp"
-                        android:layout_weight="2"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:text="ARTÍCULO"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="bottom|right"
-                        android:text="$2900"
-                        android:textSize="27sp"
-                        android:layout_weight="2"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:text="No se permiten valores por código ingresado"
-                        android:textSize="18sp"
-                        android:layout_weight="3"
-                        android:textColor="@color/specialColorText" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:orientation="horizontal"
-                        android:layout_weight="2"
-                        android:weightSum="3">
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-                            <ImageView
-                                android:onClick="addTirilloDePagoFragment"
-                                android:clickable="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/categorias_ico_next"
-                                android:background="@drawable/shape"/>
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:text="TOTAL: $2900"
-                            android:textStyle="bold"
-                            android:textSize="24sp"
-                            android:gravity="right|bottom"/>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/numberPadFragment"
+                    android:layout_weight="8"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="8"
-                    android:orientation="vertical"
-                    android:weightSum="4">
-
-                    <FrameLayout
-                        android:id="@+id/numberPadFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                    </FrameLayout>
-                </LinearLayout>
-
+                    android:layout_marginTop="5dp">
+                </FrameLayout>
             </LinearLayout>
         </FrameLayout>
-
-
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_composition"
+        android:layout_weight="1"
+        android:gravity="right">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Estado1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Estado2"/>
+    </LinearLayout>
 
 </LinearLayout>

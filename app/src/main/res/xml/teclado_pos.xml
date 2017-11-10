@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/2005/Atom ">
+
+    <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+        totalCol="7"
+        totalFila="3"
+        id="principal"
+        panel="venta"
+        marginTop="0"
+        marginLeft="0"
+        marginRight="0"
+        marginBotton="0"
+        Visible="1">
+        <boton orden="1">
+            <label>Café Americano</label>
+            <accion funcion="">
+                <dato>0000094</dato>
+            </accion>
+            <imagen>0000094</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+            <Categoria>Categoria1</Categoria>
+        </boton>
+
+        <boton orden="2">
+            <label>Café Latte 16oz</label>
+            <accion funcion="">
+                <dato>0000037</dato>
+            </accion>
+            <imagen>0000037</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+            <Categoria>Categoria1</Categoria>
+        </boton>
+
+        <boton orden="3">
+            <label>Cappuccino 12oz</label>
+            <accion funcion="">
+                <dato>0000339</dato>
+            </accion>
+            <imagen>0000339</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+            <Categoria>Categoria1</Categoria>
+        </boton>
+    </teclado>
+</feed>
