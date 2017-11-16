@@ -1,0 +1,3677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<tecladoTactil xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+
+  <TipoPanel>
+    <Tipo id="1" nombre ="Teclado" activo="false"/>
+    <Tipo id="2" nombre ="TecladoPOS" activo="false"/>
+    <Tipo id="3" nombre ="Touch" activo="false"/>
+    <Tipo id="4" nombre ="MonitorReducido" activo="true"/>
+    <Tipo id="5" nombre ="Pruebas" activo="false"/>
+  </TipoPanel>
+
+  <!-- En <TipoTeclado>, se define el teclado que será utilizado
+  en la aplicación. Los nombres que pueden ser utilizados
+  en "tipo" son:
+  - TecladoOPOS
+  - Teclad
+  oNoOPOS
+  -->
+
+  <TipoTeclado tipo="TecladoNoOPOS" />
+
+  <!-- Necesariamente se deben declarar los nombres logicos
+  de los dispositivos conectados a la POS. La aplicacion
+  abrira y usara estos dispositivos; los no declarados
+  aqui no se intentara usarlos.
+
+  El 'id' corresponde al nombre logico del dispositivo
+  declarado en el archivo App.config.
+
+  El atributo 'opcional' es opcional, e indica si la POS
+  puede operar sin el dispositivo (porque este este en
+  error, o dañado, o desconectado, pero existe). Por
+  default, todo dispositivo es mandatorio, es decir,
+  la POS no puede operar si no encuentra el dispositivo
+  o este esta en condición de error.-->
+
+  <Dispositivos>
+    <Dispositivo id="POSkeylock" opcional="true"/>
+    <Dispositivo id="POSkeyboard" opcional="true"/>
+    <Dispositivo id="POScashdrawer" opcional="true"/>
+    <Dispositivo id="POSprinter" opcional="true"/>
+    <Dispositivo id="POSlineDisplay" opcional="true"/>
+    <Dispositivo id="POSscale" opcional="true"/>
+    <Dispositivo id="POSscanner" opcional="true"/>
+  </Dispositivos>
+
+  <dimensiones>
+
+    <!-- 4x3 -->
+    <Nfilas>7</Nfilas>
+    <NColumnas>6</NColumnas>
+    <FilaNumerico>3</FilaNumerico>
+    <ColumnapanNumerico>2</ColumnapanNumerico>
+    <RowspanNumerico>3</RowspanNumerico>
+    <CollspanNumerico>3</CollspanNumerico>
+    <TecladoNumerico>true</TecladoNumerico>
+    <ColumnGrid>480</ColumnGrid>
+    <ColumnArticulo>290</ColumnArticulo>
+    <ColumnImagen>170</ColumnImagen>
+    <ColorPanel>negro</ColorPanel> <!--Opciones de(dark:para touch negro,blanco:para touch blanco , negro:para modo caracter)-->
+   
+
+    <!-- Widescreen -->
+<!--     <Nfilas>8</Nfilas>
+    <NColumnas>10</NColumnas>
+    <FilaNumerico>4</FilaNumerico>
+    <ColumnapanNumerico>6</ColumnapanNumerico>
+    <RowspanNumerico>3</RowspanNumerico>
+    <CollspanNumerico>3</CollspanNumerico>
+    <TecladoNumerico>true</TecladoNumerico>
+    <ColumnGrid>480</ColumnGrid>
+    <ColumnArticulo>290</ColumnArticulo>
+    <ColumnImagen>170</ColumnImagen>
+    <ColorPanel>negro</ColorPanel> -->
+  </dimensiones>
+
+ <Keys>
+    <Teclado id="Venta">
+      <Key id="BuscarArticulo" valor="F2" codigo=""/>
+      <Key id="CancelarArticulo" valor="Subtract" codigo=""/>
+      <Key id="DescuentosFijos" valor="Divide" codigo=""/>
+      <Key id="Esc" valor="Escape" codigo=""/>
+      <Key id="CambiarPrecio" valor="Tab" codigo=""/>
+      <Key id="CancelarTransaccion" valor="F5" codigo=""/>
+      <Key id="IngresarCliente" valor="F4" codigo=""/>
+      <Key id="TipoVenta" valor="F10" codigo=""/>
+      <Key id="Pagar" valor="Add" codigo=""/>
+      <Key id="Vendedor" valor="LWin" codigo=""/>
+      <Key id="NoVenta" valor="F6" codigo=""/>
+      <Key id="BuscarFactura" valor="F7" codigo=""/>
+      <Key id="Prestamo" valor="F8" codigo=""/>
+      <Key id="Recogida" valor="F9" codigo=""/>
+      <Key id="Arqueo" valor="System" codigo=""/>
+      <Key id="Inventario" valor="F11" codigo=""/>
+    </Teclado>
+    <Teclado id="Pago">
+      <Key id="PagoEfectivo" valor="F1" codigo=""/>
+      <Key id="PagoCredito" valor="F2" codigo=""/>
+      <Key id="Volver" valor="Escape" codigo=""/>
+      <Key id="Vendedor" valor="LWin" codigo=""/>
+      <Key id="PagoVisa" valor="F3" codigo=""/>
+      <Key id="PagoMaster" valor="F4" codigo=""/>
+      <Key id="CancelarPago" valor="Subtract" codigo=""/>
+    </Teclado>
+    <Teclado id="Inicio">
+      <Key id="Enter" valor="6" codigo=""/>
+      <Key id="Cancelar" valor="31" codigo=""/>      
+    </Teclado>
+  </Keys>
+
+<TecladoEstatico>
+  <boton fila="3" col="0" nombre="Buscar" />
+  <boton fila="3" col="1" nombre="Pagar" />
+  <boton fila="4" col="0" nombre="CancelarItem" />
+  <boton fila="4" col="1" nombre="Devolucion" />
+  <boton fila="5" col="0" nombre="ConsultarPrecio" />
+  <boton fila="5" col="1" nombre="ClienteMercadoni" />
+  <boton fila="6" col="0" nombre="Noventa" />
+  <!-- <boton fila="5" col="1" nombre="TipoVenta" /> -->
+  <!-- <boton fila="6" col="1" nombre="IngresarCliente" /> -->
+  <!--<boton fila="5" col="1" nombre="Imprimir" />-->
+
+</TecladoEstatico>
+
+<TecladoAjuste>
+  <boton fila="3" col="0" nombre="Buscar" />
+ <boton fila="3" col="1" nombre="CancelarTrans" />
+  <boton fila="4" col="0" nombre="Finalizar" />
+</TecladoAjuste>
+
+<!-- Teclado articulos mas vendidos por categoria -->
+   <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="7"
+           totalFila="3"
+           id="principal"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+       
+
+   <!-- Inicio- top6 Categoria1 _ BEB.PREPARADAS. -->
+    <boton orden="1">
+      <label>Café Americano</label>
+      <accion funcion="">
+        <dato>0000094</dato>
+      </accion>
+      <imagen>0000094</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="2">
+      <label>Café Latte 16oz</label>
+      <accion funcion="">
+        <dato>0000037</dato>
+      </accion>
+      <imagen>0000037</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+   <boton orden="3">
+      <label>Cappuccino 12oz</label>
+      <accion funcion="">
+        <dato>0000339</dato>
+      </accion>
+      <imagen>0000339</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="4">
+      <label>Cappuccino 16oz</label>
+      <accion funcion="">
+        <dato>0000036</dato>
+      </accion>
+      <imagen>0000036</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="5">
+      <label>Tinto 4oz</label>
+      <accion funcion="">
+        <dato>0000341</dato>
+      </accion>
+      <imagen>0000341</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+    
+   <boton orden="6">
+      <label>Tinto 7oz</label>
+      <accion funcion="">
+        <dato>0000342</dato>
+      </accion>
+      <imagen>0000342</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  <!-- Fin - top6 Categoria1_ BEB.PREPARADAS. -->
+    
+    <boton orden="7">
+      <label>PREPARADAS</label>
+       <accion funcion="">
+        <dato>Categoria1</dato>
+      </accion>
+      <imagen>BebidaPreparada</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+     <Categoria>Categorias</Categoria>
+     </boton>
+  <boton orden="8">
+      <label>CONSUMO</label>
+      <accion funcion="">
+        <dato>Categoria8</dato>
+      </accion>
+      <imagen>Consumo</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+ <!-- FIN  -->
+       
+      
+ <!-- top5 Categoria 2_ PANADERIA -->
+  <boton orden="9">
+      <label>Baguette 5 Cer 120gr</label>
+      <accion funcion="">
+        <dato>0000003</dato>
+      </accion>
+      <imagen>0000003</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+ 
+    <boton orden="10">
+      <label>Pan Bauette PLUSS 250gr</label>
+      <accion funcion="">
+        <dato>0000004</dato>
+      </accion>
+      <imagen>0000004</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+   <boton orden="11">
+      <label>Gourmet Gran reserva 95gr</label>
+      <accion funcion="">
+        <dato>0000139</dato>
+      </accion>
+      <imagen>0000139</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+   <boton orden="12">
+      <label>Mini Flauta 80gr</label>
+      <accion funcion="">
+        <dato>0000140</dato>
+      </accion>
+      <imagen>0000140</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+  
+    <boton orden="13">
+      <label>Pan Miniatura 8 cer.50gr</label>
+      <accion funcion="">
+        <dato>0000088</dato>
+      </accion>
+      <imagen>0000088</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+   <boton orden="14">
+      <label>Pan Blanco 400gr</label>
+      <accion funcion="">
+        <dato>0000306</dato>
+      </accion>
+      <imagen>0000306</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+        
+<!-- Fin - top5 Categoria 2_ PANADERIA -->
+  <boton orden="15">
+      <label>PANADERIA</label>
+      <accion funcion="">
+        <dato>Categoria2</dato>
+      </accion>
+      <imagen>Panaderia_</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categorias</Categoria>
+    </boton>
+   <boton orden="16">
+      <label>OTROS</label>
+      <accion funcion="">
+        <dato>Categoria9</dato>
+      </accion>
+      <imagen>Otros</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton> 
+ <!-- FIN  -->
+ 
+ <!-- Inicio - top5 Categoria2_ HOJALDRES -->
+  <boton orden="17">
+      <label>Croissant caprice cereal.</label>
+      <accion funcion="">
+        <dato>0000010</dato>
+      </accion>
+      <imagen>0000010</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="18">
+      <label>Croissant Chocolate</label>
+      <accion funcion="">
+        <dato>0000008</dato>
+      </accion>
+      <imagen>0000008</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="19">
+      <label>Croissant Mantequilla</label>
+      <accion funcion="">
+        <dato>0000007</dato>
+      </accion>
+      <imagen>0000007</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="20">
+      <label>Mini Napoli. Crema facil</label>
+      <accion funcion="">
+        <dato>0000089</dato>
+      </accion>
+      <imagen>0000089</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="21">
+      <label>Napoli. Jamón queso</label>
+      <accion funcion="">
+        <dato>0000009</dato>
+      </accion>
+      <imagen>0000009</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+      
+    <boton orden="22">
+      <label>Pastel de Queso</label>
+      <accion funcion="">
+        <dato>0000100</dato>
+      </accion>
+      <imagen>0000100</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+<!-- Fin - top5 Categoria 3_ HOJALDRES -->
+  <boton orden="23">
+      <label>HOJALDRES</label>
+      <accion funcion="">
+        <dato>Categoria3</dato>
+      </accion>
+      <imagen>Reposteria</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categorias</Categoria>
+    </boton>
+    <boton orden="24">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+ <!-- FIN  -->
+ 
+  <!-- Inicio top5 Categoria 4 - REPOSTERIA -->
+    <boton orden="25">
+      <label>Dots Negrito</label>
+      <accion funcion="">
+        <dato>0000091</dato>
+      </accion>
+      <imagen>0000091</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="26">
+      <label>Muffin Bicolor</label>
+      <accion funcion="">
+        <dato>0000092</dato>
+      </accion>
+      <imagen>0000092</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="27">
+      <label>Torta de Chocolate</label>
+      <accion funcion="">
+        <dato>0000014</dato>
+      </accion>
+      <imagen>0000014</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="28">
+      <label>Torta Amapola</label>
+      <accion funcion="">
+        <dato>0000013</dato>
+      </accion>
+      <imagen>0000013</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="29">
+      <label>Torta de Manzana</label>
+      <accion funcion="">
+        <dato>0000123</dato>
+      </accion>
+      <imagen>0000123</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+      
+   <boton orden="30">
+      <label>Tronquito de Chocolate</label>
+      <accion funcion="">
+        <dato>0000346</dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  <!-- Fin - top5 Categoria 4_  REPOSTERIA  -->
+     <boton orden="31">
+      <label>REPOSTERIA</label>
+      <accion funcion="">
+        <dato>Categoria4</dato>
+      </accion>
+      <imagen>Reposteria</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categorias</Categoria>
+    </boton>
+    <boton orden="32">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+  <!-- FIN. -->
+ 
+  <!-- Inicio - top5 Categoria 5_ COCINA -->
+  <boton orden="33">
+      <label>Sandwich Jamón- tocin.</label>
+      <accion funcion="">
+        <dato>0000075</dato>
+      </accion>
+      <imagen>0000093</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="34">
+      <label>Sandwich Huevo- tocin.</label>
+      <accion funcion="">
+        <dato>0000093</dato>
+      </accion>
+      <imagen>0000093</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+    
+  <boton orden="35">
+      <label>Sandw. Integral Pavo</label>
+      <accion funcion="">
+        <dato>0000056</dato>
+      </accion>
+      <imagen>0000056</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+     
+  <boton orden="36">
+      <label>Sandw. Pepperoni</label>
+      <accion funcion="">
+        <dato>0000239</dato>
+      </accion>
+      <imagen>0000239</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+   
+  <boton orden="37">
+      <label>Sandw. Pollo Pimentón</label>
+      <accion funcion="">
+        <dato>0000054</dato>
+      </accion>
+      <imagen>0000054</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton> 
+   
+  <boton orden="38">
+      <label>Sandw. Salami queso</label>
+      <accion funcion="">
+        <dato>0000057</dato>
+      </accion>
+      <imagen>0000057</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+      
+  <!-- Fin - top7 Categoria 5_ COCINA. -->
+  <boton orden="39">
+      <label>COCINA</label>
+      <accion funcion="">
+        <dato>Categoria5</dato>
+      </accion>
+      <imagen>Cocina</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categorias</Categoria>
+    </boton>
+    <boton orden="40">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+  <!-- FIN -->
+ 
+   <!--Inicio top5 Categoria 6_ nevera-->
+    <boton orden="41">
+      <label>Aloe Vera Trad.</label>
+      <accion funcion="">
+        <dato>0000045</dato>
+      </accion>
+      <imagen>0000045</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+   <boton orden="42">
+      <label>Beb. Hidratan. Tropic.</label>
+      <accion funcion="">
+        <dato>0000130</dato>
+      </accion>
+      <imagen>0000130</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+   <boton orden="43">
+      <label>Coca Cola 400ml</label>
+      <accion funcion="">
+        <dato>0000020</dato>
+      </accion>
+      <imagen>0000020</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+    <boton orden="44">
+      <label>Jugo de Naranja</label>
+      <accion funcion="">
+        <dato>0000015</dato>
+      </accion>
+      <imagen>0000015</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="45">
+      <label>Té Durazno</label>
+      <accion funcion="">
+        <dato>0000112</dato>
+      </accion>
+      <imagen>0000112</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="46">
+      <label>Té Limón</label>
+      <accion funcion="">
+        <dato>0000111</dato>
+      </accion>
+      <imagen>0000111</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+   <!-- Fin - top5 Categoria 6_ NEVERA. -->
+  <boton orden="47">
+      <label>NEVERA</label>
+      <accion funcion="">
+        <dato>Categoria6</dato>
+      </accion>
+      <imagen>Nevera</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+     <Categoria>Categorias</Categoria>
+    </boton>
+   <boton orden="48">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+ <!-- FIN  -->
+ 
+ 
+   <!--Inicio top5 Categoria 7_ LACTEOS-->  
+  <boton orden="49">
+      <label>Avena bolsa 200ml</label>
+      <accion funcion="">
+        <dato>0000047</dato>
+      </accion>
+      <imagen>0000047</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+    <boton orden="50">
+      <label>Queso pera S/Relleno</label>
+      <accion funcion="">
+        <dato>0000040</dato>
+      </accion>
+      <imagen>0000040</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="51">
+      <label>Queso R/Bocadillo</label>
+      <accion funcion="">
+        <dato>0000039</dato>
+      </accion>
+      <imagen>0000039</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="52">
+      <label>Vaso Kumis</label>
+      <accion funcion="">
+        <dato>0000046</dato>
+      </accion>
+      <imagen>0000046</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="53">
+      <label>Yogourt Feijoa</label>
+      <accion funcion="">
+        <dato>0000313</dato>
+      </accion>
+      <imagen>0000313</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="54">
+      <label>Yogourt Frut.Rojos</label>
+      <accion funcion="">
+        <dato>0000016</dato>
+      </accion>
+      <imagen>0000016</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+   <!-- Fin - top7 Categoria7_  LACTEOS  S -->
+   <boton orden="55">
+      <label>LACTEOS</label>
+      <accion funcion="">
+        <dato>Categoria7</dato>
+      </accion>
+      <imagen>BebidaRefri</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+     <Categoria>Categorias</Categoria>
+    </boton>  
+  
+  <boton orden="56">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categorias</Categoria>
+    </boton>
+ <!-- FIN -->
+  
+  </teclado>
+
+ <!-- botones Panel Ventas -->
+
+   <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="7"
+           totalFila="3"
+           id="funciones"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+    
+   <!--  <boton orden="1">
+      <label></label>
+      <accion funcion="Buscar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_buscar</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+ -->
+    <boton orden="2">
+      <label>Pagar</label>
+      <accion funcion="Pagar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_pagar</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+  <boton orden="3">
+      <label>Cancelar</label>
+      <accion funcion="cancelaroperacion">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cantrans</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+  
+    <boton orden="4">
+      <label>Canc item</label>
+      <accion funcion="CancelarItem">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="5">
+      <label>Devolucion</label>
+      <accion funcion="Devolucion">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="6">
+      <label>Cons Precio</label>
+      <accion funcion="ConsultarPrecio">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+  <!--  <boton orden="6">
+      <label>+ Cliente</label>
+      <accion funcion="IngresarCliente">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cliente</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton> -->
+
+    <boton orden="7">
+      <label>Mercadoni</label>
+      <accion funcion="ClienteMercadoni">
+        <dato>0900839095-6</dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="8">
+      <label>No venta</label>
+      <accion funcion="Noventa">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+  </teclado>
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="7"
+           totalFila="3"
+           id="ajuste"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+
+  <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>     
+       
+   <!--  <boton orden="1">
+      <label>Buscar</label>
+      <accion funcion="Buscar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_buscar</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton> -->
+
+    <boton orden="2">
+      <label>Cancelar</label>
+      <accion funcion="cancelaroperacion">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cantrans</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="3">
+      <label>Finalizar</label>
+      <accion funcion="Finalizar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_pagar</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+</teclado>
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+         totalCol="4"
+         totalFila="1"
+         id="tecladoNoventa"
+         panel="venta"
+         marginTop="0"
+         marginLeft="0"
+         marginRight="0"
+         marginBotton="0"
+         Visible="1">
+
+    <boton orden="1">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="2">
+      <label>Cancelar</label>
+      <accion funcion="cancelaroperacion">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cantrans</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="3">
+      <label>Arqueo</label>
+      <accion funcion="Arqueo">
+        <dato></dato>
+      </accion>
+      <imagen>ico_arqueo</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="4">
+      <label>Cierre Datafono</label>
+      <accion funcion="CierreDatafono">
+        <dato></dato>
+      </accion>
+      <imagen>ico_prestamo</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+   <!--  <boton orden="5">
+      <label>Busca fact</label>
+      <accion funcion="BuscarFactura">
+        <dato></dato>
+      </accion>
+      <imagen>ico_buscarfac</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+ -->
+    <boton orden="6">
+      <label>Imprimir Ultima</label>
+      <accion funcion="ImprimirUltima">
+        <dato></dato>
+      </accion>
+      <imagen>ico_imprimirult</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="7">
+      <label>Retiro</label>
+      <accion funcion="Recogida">
+        <dato>2</dato>
+      </accion>
+      <imagen>ico_recogida</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+   <boton orden="8">
+      <label>Ajustes</label>
+      <accion funcion="Ajustes">
+        <dato></dato>
+      </accion>
+      <imagen>ico_ajustes</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+
+    <boton orden="9">
+      <label>Tipo Venta</label>
+      <accion funcion="TipoVenta">
+        <dato></dato>
+      </accion>
+      <imagen>ico_ventaespecial</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+  <!--   <boton orden="10">
+      <label>+ Cliente</label>
+      <accion funcion="IngresarCliente">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cliente</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>  -->
+
+    <!--<boton orden="6">
+      <label>Inventario</label>
+      <accion funcion="Inventario">
+        <dato></dato>
+      </accion>
+      <imagen>ico_inventario</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>-->
+
+    <!--<boton orden="5">
+      <label>Asegurar Terminal</label>
+      <accion funcion="Asegurar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_inventario</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>-->
+
+    <boton orden="11">
+      <label>Cerrar Sesion</label>
+      <accion funcion="CerrarSesion">
+        <dato></dato>
+      </accion>
+      <imagen>ico_inventario</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+  </teclado>
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="4"
+           totalFila="4"
+           id="numerico"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="0">
+
+    <boton fila="0" col="0">
+      <label>1</label>
+      <accion funcion="1">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="0" col="1">
+      <label>2</label>
+      <accion funcion="2">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="0" col="2">
+      <label>3</label>
+      <accion funcion="3">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="0" col="3">
+      <label>Esc</label>
+      <accion funcion="Esc">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="1" col="0">
+      <label>4</label>
+      <accion funcion="4">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="1" col="1">
+      <label>5</label>
+      <accion funcion="5">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="1" col="2">
+      <label>6</label>
+      <accion funcion="6">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="1" col="3">
+      <label>Bcsp</label>
+      <accion funcion="Bcsp">
+        <dato></dato>
+      </accion>
+      <imagen>ico_bsc</imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="2" col="0">
+      <label>7</label>
+      <accion funcion="7">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="2" col="1">
+      <label>8</label>
+      <accion funcion="8">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="2" col="2">
+      <label>9</label>
+      <accion funcion="9">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="2" col="3">
+      <label>*</label>
+      <accion funcion="*">
+        <dato></dato>
+      </accion>
+      <imagen>ico_X</imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="3" col="0">
+      <label>0</label>
+      <accion funcion="0">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="3" col="1">
+      <label>00</label>
+      <accion funcion="00">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="3" col="2">
+      <label>.</label>
+      <accion funcion=".">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton fila="3" col="3">
+      <label>Intro</label>
+      <accion funcion="Intro">
+        <dato></dato>
+      </accion>
+      <imagen>ico_enter</imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+  </teclado>
+
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="4"
+           totalFila="2"
+           id="tecladoDescuentos"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+
+    <boton orden="1">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="2">
+      <label>Abierto</label>
+      <accion funcion="Abierto">
+        <dato></dato>
+      </accion>
+      <imagen>ico_descabierto</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="3">
+      <label>10%</label>
+      <accion funcion="Descuento10">
+        <dato></dato>
+      </accion>
+      <over>ColorFondoOpciones</over>
+      <imagen>ico_descuento</imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="4">
+      <label>20%</label>
+      <accion funcion="Descuento20">
+        <dato></dato>
+      </accion>
+      <over>ColorFondoOpciones</over>
+      <imagen>ico_descuento</imagen>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="5">
+      <label>30%</label>
+      <accion funcion="Descuento30">
+        <dato></dato>
+      </accion>
+      <imagen>ico_descuento</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="6">
+      <label>Rebaja</label>
+      <accion funcion="Rebaja">
+        <dato></dato>
+      </accion>
+      <imagen>ico_rebaja</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="7">
+      <label>Canc desc</label>
+      <accion funcion="Cancelar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cancdscto</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+  </teclado>
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="9"
+           totalFila="0"
+           id="tecladoPagos"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+
+
+          <boton orden="1">
+            <label>Volver</label>
+            <accion funcion="Regresar">
+              <dato></dato>
+            </accion>
+            <imagen>ico_volver</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+          </boton>
+
+          <boton orden="2">
+            <label>Efectivo</label>
+            <accion funcion="Efectivo">
+              <dato></dato>
+            </accion>
+            <imagen>ico_efectivo</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+          </boton>
+
+          <boton orden="3">
+            <label>Datafono</label>
+            <accion funcion="PagoDatafono">
+              <dato></dato>
+            </accion>
+            <imagen>ico_credito</imagen>
+            <over>ColorFondoOpciones</over>
+            <Enabled>1</Enabled>
+          </boton>
+
+          
+        
+
+<!--   <boton orden="4">
+    <label>TarjeCred</label>
+    <accion funcion="TarjetaCredito">
+      <dato></dato>
+    </accion>
+    <imagen>ico_tarjcredito</imagen>
+    <over>ColorFondoOpciones</over>
+    <Enabled>1</Enabled>
+  </boton> -->
+
+   <!--  <boton orden="3">
+      <label>Débito</label>
+      <accion funcion="TarjetaDebito">
+        <dato></dato>
+      </accion>
+      <imagen>ico_tarjcredito</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+ -->
+    <boton orden="5">
+      <label>Canc Pago</label>
+      <accion funcion="CancelarPago">
+        <dato></dato>
+      </accion>
+      <imagen>ico_cancelaritem</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <!--<boton orden="4">
+      <label>Descuento</label>
+      <accion funcion="Descuento">
+        <dato></dato>
+      </accion>
+      <imagen>ico_descuento</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>-->
+
+    <!--<boton orden="6">
+      <label>+ Vend</label>
+      <accion funcion="IngresarVendedor">
+        <dato></dato>
+      </accion>
+      <imagen>ico_vendedor</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="7">
+      <label>Descuento</label>
+      <accion funcion="Descuento">
+        <dato></dato>
+      </accion>
+      <imagen>ico_descuento</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>
+
+    <boton orden="7">
+      <label>Buscar</label>
+      <accion funcion="Buscar">
+        <dato></dato>
+      </accion>
+      <imagen>ico_buscar</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    </boton>-->
+
+  </teclado>
+
+
+  <teclado raiz="true" ancho="400" alto="340" gap="1" padding="0.5"
+           totalCol="4"
+           totalFila="1"
+           id="tecladoCat"
+           panel="venta"
+           marginTop="0"
+           marginLeft="0"
+           marginRight="0"
+           marginBotton="0"
+           Visible="1">
+
+    <boton orden="1">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+  <!--Inicio Categoria 1 BEBIDAS PREPARADAS-->
+    <boton orden="2">
+      <label>Aromática Flor-Jamaica</label>
+      <accion funcion="">
+        <dato>00003636</dato>
+      </accion>
+      <imagen>0000363</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+    <boton orden="3">
+      <label>Aromática Frut.Amarillos</label>
+      <accion funcion="">
+        <dato>0000069</dato>
+      </accion>
+      <imagen>0000069</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="4">
+      <label>Beb.Granizada Sandía</label>
+      <accion funcion="">
+        <dato>0000355</dato>
+      </accion>
+      <imagen>0000355</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+
+    <boton orden="5">
+      <label>Beb. Tostaccino</label>
+      <accion funcion="">
+        <dato>0000138</dato>
+      </accion>
+      <imagen>0000138</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="6">
+      <label>Beb. Vainilla Francesa</label>
+      <accion funcion="">
+        <dato>0000352</dato>
+      </accion>
+      <imagen>0000352</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="7">
+      <label>Café Americano</label>
+      <accion funcion="">
+        <dato>0000094</dato>
+      </accion>
+      <imagen>0000094</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="8">
+      <label>Café espresso 4oz</label>
+      <accion funcion="">
+        <dato>0000034</dato>
+      </accion>
+      <imagen>0000034</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+   <boton orden="9">
+      <label>Café esp.doble 4oz</label>
+      <accion funcion="">
+        <dato>0000035</dato>
+      </accion>
+      <imagen>0000035</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+    <boton orden="10">
+      <label>Café latte 12oz</label>
+      <accion funcion="">
+        <dato>0000340</dato>
+      </accion>
+      <imagen>0000340</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="11">
+      <label>Café Latte 16oz</label>
+      <accion funcion="">
+        <dato>0000341</dato>
+      </accion>
+      <imagen>0000341</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="12">
+      <label>Cappuccino 12oz</label>
+      <accion funcion="">
+        <dato>0000339</dato>
+      </accion>
+      <imagen>0000339</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="13">
+      <label>Cappuccino 16oz</label>
+      <accion funcion="">
+        <dato>0000036</dato>
+      </accion>
+      <imagen>0000036</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="14">
+      <label>Chocolate en agua</label>
+      <accion funcion="">
+        <dato>0000132</dato>
+      </accion>
+      <imagen>0000132</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="15">
+      <label>Chocolate en leche</label>
+      <accion funcion="">
+        <dato>0000133</dato>
+      </accion>
+      <imagen>0000133</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="16">
+      <label>Espresso Macchiato</label>
+      <accion funcion="">
+        <dato>0000300</dato>
+      </accion>
+      <imagen>0000300</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+
+    <boton orden="17">
+      <label>Mocaccino</label>
+      <accion funcion="">
+        <dato>0000134</dato>
+      </accion>
+      <imagen>0000134</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+    
+    <boton orden="18">
+      <label>Té Negro Beb.</label>
+      <accion funcion="">
+        <dato>0000068</dato>
+      </accion>
+      <imagen>0000068</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+    
+    <boton orden="19">
+      <label>Tinto 12oz</label>
+      <accion funcion="">
+        <dato>0000033</dato>
+      </accion>
+      <imagen>0000033</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="20">
+      <label>Tinto 4oz</label>
+      <accion funcion="">
+        <dato>0000341</dato>
+      </accion>
+      <imagen>0000341</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  
+  <boton orden="21">
+      <label>Tinto 7oz</label>
+      <accion funcion="">
+        <dato>0000342</dato>
+      </accion>
+      <imagen>0000342</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria1</Categoria>
+    </boton>
+  <!--Fin Categoria1- preparadas-->
+  
+  <!--Inicio Categoria2 -panaderia-->
+   <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria2</Categoria>
+    </boton>
+  
+   <boton orden="1">
+      <label>Baguette 5 Cer 120gr</label>
+      <accion funcion="">
+        <dato>0000003</dato>
+      </accion>
+      <imagen>0000003</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="2">
+      <label>Baguette 5 cer</label>
+      <accion funcion="">
+        <dato>0000764</dato>
+      </accion>
+      <imagen>0000764</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="3">
+      <label>Baguette PLUS 250gr</label>
+      <accion funcion="">
+        <dato>0000004</dato>
+      </accion>
+      <imagen>0000004</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="4">
+      <label>Baguette PLUS</label>
+      <accion funcion="">
+        <dato>0000765</dato>
+      </accion>
+      <imagen>0000765</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="5">
+      <label>Gourmet G-reserva 95gr</label>
+      <accion funcion="">
+        <dato>0000139</dato>
+      </accion>
+      <imagen>0000139</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="6">
+      <label>Gourmet G-resreva</label>
+      <accion funcion="">
+        <dato>0000761</dato>
+      </accion>
+      <imagen>0000761</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+    <boton orden="7">
+      <label>Mini Flauta 80gr</label>
+      <accion funcion="">
+        <dato>0000140</dato>
+      </accion>
+      <imagen>0000140</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+
+  <boton orden="8">
+      <label>Pan Blanco 400gr</label>
+      <accion funcion="">
+        <dato>0000306</dato>
+      </accion>
+      <imagen>0000306</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+  <boton orden="9">
+      <label>Pan Centeno</label>
+      <accion funcion="">
+        <dato>0000359</dato>
+      </accion>
+      <imagen>0000359</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+    <boton orden="10">
+      <label>Pan Miniatura 8cer 50gr</label>
+      <accion funcion="">
+        <dato>0000088</dato>
+      </accion>
+      <imagen>0000088</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+   <boton orden="11">
+      <label>Pan Miniatura 8cer_</label>
+      <accion funcion="">
+        <dato>0000767</dato>
+      </accion>
+      <imagen>0000767</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+  <boton orden="12">
+      <label>Pan Miniatura Especies</label>
+      <accion funcion="">
+        <dato>0000344 </dato>
+      </accion>
+      <imagen>0000344</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton>
+  
+    <boton orden="13">
+      <label>Panecillo Blanco 60gr</label>
+      <accion funcion="">
+        <dato>0000305</dato>
+      </accion>
+      <imagen>0000305</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria2</Categoria>
+    </boton> 
+  
+<!--Fin Categoria2- PAMADERIA-->
+
+ <!--Inicio Categoria3 _ HOJALDRES -->
+   <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria3</Categoria>
+    </boton>
+  
+    <boton orden="2">
+      <label>Cheesecake</label>
+      <accion funcion="">
+        <dato>0000360</dato>
+      </accion>
+      <imagen>0000360</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="3">
+      <label>Corazón</label>
+      <accion funcion="">
+        <dato>0000357</dato>
+      </accion>
+      <imagen>0000357</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="4">
+      <label>Croissant caprice cereal.</label>
+      <accion funcion="">
+        <dato>0000010</dato>
+      </accion>
+      <imagen>0000010</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+   
+    <boton orden="5">
+      <label>Croissant caprice</label>
+      <accion funcion="">
+        <dato>0000758</dato>
+      </accion>
+      <imagen>0000758</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+   
+    <boton orden="6">
+      <label>Croissant Chocolate</label>
+      <accion funcion="">
+        <dato>0000008</dato>
+      </accion>
+      <imagen>0000008</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="7">
+      <label>Croissant Chocolate_</label>
+      <accion funcion="">
+        <dato>0000759</dato>
+      </accion>
+      <imagen>0000759</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+    <boton orden="8">
+      <label>Croissant Mantequilla</label>
+      <accion funcion="">
+        <dato>0000007</dato>
+      </accion>
+      <imagen>0000007</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="9">
+      <label>Croissat Mantequi_</label>
+      <accion funcion="">
+        <dato>0000760</dato>
+      </accion>
+      <imagen>0000760</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="10">
+      <label>Croissant Salchicha</label>
+      <accion funcion="">
+        <dato>0000358</dato>
+      </accion>
+      <imagen>0000358</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="11">
+      <label>Mini Napoli. Choc.</label>
+      <accion funcion="">
+        <dato>0000343</dato>
+      </accion>
+      <imagen>0000343</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="12">
+      <label>Mini Napoli. Crema facil</label>
+      <accion funcion="">
+        <dato>0000089</dato>
+      </accion>
+      <imagen>0000089</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+      
+  <boton orden="13">
+      <label>Napoli. Jamón queso</label>
+      <accion funcion="">
+        <dato>0000009</dato>
+      </accion>
+      <imagen>0000009</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="14">
+      <label>Napolit jam-queso_</label>
+      <accion funcion="">
+        <dato>0000763</dato>
+      </accion>
+      <imagen>0000763</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton> 
+  
+  <boton orden="15">
+      <label>Pastel Pizza</label>
+      <accion funcion="">
+        <dato>0000361</dato>
+      </accion>
+      <imagen>0000361</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+    
+  <boton orden="16">
+      <label>Pastel Queso</label>
+      <accion funcion="">
+        <dato>0000100</dato>
+      </accion>
+      <imagen>0000100</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+      
+  <boton orden="17">
+      <label>Pastel Queso_.</label>
+      <accion funcion="">
+        <dato>0000769</dato>
+      </accion>
+      <imagen>0000769</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="18">
+      <label>Pastel Vainilla</label>
+      <accion funcion="">
+        <dato>0000347</dato>
+      </accion>
+      <imagen>0000347</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="19">
+      <label>Pastel Vainill</label>
+      <accion funcion="">
+        <dato>0000770</dato>
+      </accion>
+      <imagen>0000770</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="20">
+      <label>Pastel gloria Arequipe</label>
+      <accion funcion="">
+        <dato>0000066</dato>
+      </accion>
+      <imagen>0000066</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="21">
+      <label>Pastel gloria Arequipe_</label>
+      <accion funcion="">
+        <dato>0000771</dato>
+      </accion>
+      <imagen>0000771</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="22">
+      <label>Pastel gloria Bocadillo</label>
+      <accion funcion="">
+        <dato>0000058</dato>
+      </accion>
+      <imagen>0000058</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+    
+  <boton orden="23">
+      <label>Pastel Gloria Bocad</label>
+      <accion funcion="">
+        <dato>0000772</dato>
+      </accion>
+      <imagen>0000772</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>  
+  
+  <boton orden="24">
+      <label>Pastel Hawaiano</label>
+      <accion funcion="">
+        <dato>0000356</dato>
+      </accion>
+      <imagen>0000356</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria3</Categoria>
+    </boton>
+
+   <!--Fin Categoria3 hojaldres-->
+
+  <!--Inicio Categoria4- REPOSTERIA-->
+   <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="2">
+      <label>Brownie</label>
+      <accion funcion="">
+        <dato>0000012</dato>
+      </accion>
+      <imagen>0000012</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="3">
+      <label>Brownie Nuez</label>
+      <accion funcion="">
+        <dato>0000065</dato>
+      </accion>
+      <imagen>0000065</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="4">
+      <label>Dots Miel</label>
+      <accion funcion="">
+        <dato>0000090</dato>
+      </accion>
+      <imagen>0000090</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="5">
+      <label>Dots Negrito</label>
+      <accion funcion="">
+        <dato>0000091</dato>
+      </accion>
+      <imagen>0000091</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="6">
+      <label>Galletas chips de Choc.</label>
+      <accion funcion="">
+        <dato>0000206</dato>
+      </accion>
+      <imagen>0000206</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="7">
+      <label>Galleta Doble Chocolate</label>
+      <accion funcion="">
+        <dato>0000205</dato>
+      </accion>
+      <imagen>0000205</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="8">
+      <label>Galleta Navideña</label>
+      <accion funcion="">
+        <dato>0000314</dato>
+      </accion>
+      <imagen>0000314</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="9">
+      <label>Galleta Trad. con Azucar</label>
+      <accion funcion="">
+        <dato>0000207</dato>
+      </accion>
+      <imagen>0000207</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="10">
+      <label>Muffin Bicolor</label>
+      <accion funcion="">
+        <dato>0000092</dato>
+      </accion>
+      <imagen>0000092</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="11">
+      <label>Tartaleta Alm/FrutRojos</label>
+      <accion funcion="">
+        <dato>0000308</dato>
+      </accion>
+      <imagen>0000308</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="12">
+      <label>Tartaleta choc/banano</label>
+      <accion funcion="">
+        <dato>0000307</dato>
+      </accion>
+      <imagen>0000307</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="13">
+      <label>Torta de Chocolate</label>
+      <accion funcion="">
+        <dato>0000014</dato>
+      </accion>
+      <imagen>0000014</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+  <boton orden="14">
+      <label>Torta Amapola</label>
+      <accion funcion="">
+        <dato>0000013</dato>
+      </accion>
+      <imagen>0000013</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+   <boton orden="15">
+      <label>Torta de Manzana</label>
+      <accion funcion="">
+        <dato>0000123</dato>
+      </accion>
+      <imagen>0000123</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+
+   <boton orden="16">
+      <label>Tronquito de Chocolate</label>
+      <accion funcion="">
+        <dato>0000346</dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton>
+  
+    <boton orden="17">
+      <label>Tronquito de Crema</label>
+      <accion funcion="">
+        <dato>0000124</dato>
+      </accion>
+      <imagen>0000124</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria4</Categoria>
+    </boton> 
+  <!--Fin Categoria4-  reposteria-->
+
+ <!--Inicio Categoria5 cocina-->
+  <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria5</Categoria>
+    </boton>
+  
+    <boton orden="2">
+      <label>Arroz con leche</label>
+      <accion funcion="">
+        <dato>0000315</dato>
+      </accion>
+      <imagen>0000315</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  <boton orden="3">
+      <label>Ensalada Cappresse</label>
+      <accion funcion="">
+        <dato>0000128</dato>
+      </accion>
+      <imagen>0000128</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+     
+  <boton orden="4">
+      <label>Ensalada de Repollo</label>
+      <accion funcion="">
+        <dato>0000241</dato>
+      </accion>
+      <imagen>0000241</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  <boton orden="5">
+      <label>Ensalda de Pollo</label>
+      <accion funcion="">
+        <dato>0000129</dato>
+      </accion>
+      <imagen>0000129</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+    
+  <boton orden="6">
+      <label>Ensalada tostapasta</label>
+      <accion funcion="">
+        <dato>0000321</dato>
+      </accion>
+      <imagen>0000321</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  <boton orden="7">
+      <label>Ensalada Vegetariana</label>
+      <accion funcion="">
+        <dato>0000240</dato>
+      </accion>
+      <imagen>0000240</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>  
+    
+  <boton orden="8">
+      <label>Huevo con ceboll-oliva</label>
+      <accion funcion="">
+        <dato>0000104</dato>
+      </accion>
+      <imagen>0000104</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+      
+  <boton orden="9">
+      <label>Manazana Fruta</label>
+      <accion funcion="">
+        <dato>0000500</dato>
+      </accion>
+      <imagen>0000500</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+        
+   <boton orden="10">
+      <label>Melón Fruta porc.</label>
+      <accion funcion="">
+        <dato>0000503</dato>
+      </accion>
+      <imagen>0000503</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="11">
+      <label>Papaya Fruta Porc.</label>
+      <accion funcion="">
+        <dato>0000502</dato>
+      </accion>
+      <imagen>0000502</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="12">
+      <label>Parfait frutos rojos</label>
+      <accion funcion="">
+        <dato>0000320</dato>
+      </accion>
+      <imagen>0000320</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="13">
+      <label>Parfatit fresa</label>
+      <accion funcion="">
+        <dato>0000076</dato>
+      </accion>
+      <imagen>0000076</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+    
+   <boton orden="14">
+      <label>Pärfait melón</label>
+      <accion funcion="">
+        <dato>0000074</dato>
+      </accion>
+      <imagen>0000074</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="15">
+      <label>Porción fruta mixta</label>
+      <accion funcion="">
+        <dato>0000319</dato>
+      </accion>
+      <imagen>0000319</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="16">
+      <label>Postre Selva negra</label>
+      <accion funcion="">
+        <dato>0000070</dato>
+      </accion>
+      <imagen>0000070</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="17">
+      <label>Postre Tiramisú</label>
+      <accion funcion="">
+        <dato>0000072</dato>
+      </accion>
+      <imagen>0000072</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="18">
+      <label>Postres Tres leches</label>
+      <accion funcion="">
+        <dato>0000073</dato>
+      </accion>
+      <imagen>0000073</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+    
+   <boton orden="19">
+      <label>Relleno Jamón-tocin</label>
+      <accion funcion="">
+        <dato>0000236</dato>
+      </accion>
+      <imagen>0000236</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="20">
+      <label>Sandwich Jamón- tocin</label>
+      <accion funcion="">
+        <dato>0000075</dato>
+      </accion>
+      <imagen>0000075</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  <boton orden="21">
+      <label>Sandwich Huevo- tocin.</label>
+      <accion funcion="">
+        <dato>0000093</dato>
+      </accion>
+      <imagen>0000093</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="22">
+      <label>Sandwich Integral pavo</label>
+      <accion funcion="">
+        <dato>0000056</dato>
+      </accion>
+      <imagen>0000056</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="23">
+      <label>Sandwich Pepperoni</label>
+      <accion funcion="">
+        <dato>0000239</dato>
+      </accion>
+      <imagen>0000239</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="24">
+      <label>Sandwich Pollo/Piment</label>
+      <accion funcion="">
+        <dato>0000054</dato>
+      </accion>
+      <imagen>0000054</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+    
+   <boton orden="25">
+      <label>Sandwich Salami queso</label>
+      <accion funcion="">
+        <dato>0000057</dato>
+      </accion>
+      <imagen>0000057</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  
+   <boton orden="26">
+      <label>Sandwich Tostao</label>
+      <accion funcion="">
+        <dato>0000055</dato>
+      </accion>
+      <imagen>0000055</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+   <boton orden="27">
+      <label>Wrap de Carne</label>
+      <accion funcion="">
+        <dato>0000086</dato>
+      </accion>
+      <imagen>0000086</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+  
+  <boton orden="28">
+      <label>Wrap de pollo</label>
+      <accion funcion="">
+        <dato>0000086</dato>
+      </accion>
+      <imagen>0000086</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria5</Categoria>
+    </boton>
+ <!--Fin Categoria5-  BEB.CALIENTES-->
+
+  <!--Inicio Categoria6   nevera-->
+   <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria6</Categoria>
+    </boton>
+  
+    <boton orden="2">
+      <label>7UP Postobón pet400ml</label>
+      <accion funcion="">
+        <dato>0000351</dato>
+      </accion>
+      <imagen>0000351</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="3">
+      <label>Agua Blau C/Gas 600ml</label>
+      <accion funcion="">
+        <dato>0000029</dato>
+      </accion>
+      <imagen>0000029</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="4">
+      <label>Agua Blau S/Gas 600ml</label>
+      <accion funcion="">
+        <dato>0000030</dato>
+      </accion>
+      <imagen>0000030</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="5">
+      <label>Agua Jaibana C/Gas 600ml</label>
+      <accion funcion="">
+        <dato>0000032</dato>
+      </accion>
+      <imagen>0000032</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="6">
+      <label>Agua Jaibana S/Gas</label>
+      <accion funcion="">
+        <dato>0000031</dato>
+      </accion>
+      <imagen>0000031</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="7">
+      <label>Agua Nacimiento</label>
+      <accion funcion="">
+        <dato>0000324</dato>
+      </accion>
+      <imagen>0000324</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="8">
+      <label>Aloe vera Lyche</label>
+      <accion funcion="">
+        <dato>0000062</dato>
+      </accion>
+      <imagen>0000062</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="9">
+      <label>Aloe vera tradicional</label>
+      <accion funcion="">
+        <dato>0000045</dato>
+      </accion>
+      <imagen>0000045</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="10">
+      <label>Beb.Agua Flor jamaica</label>
+      <accion funcion="">
+        <dato>0000080</dato>
+      </accion>
+      <imagen>0000080</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="11">
+      <label>Beb. Caribeña 400ml</label>
+      <accion funcion="">
+        <dato>0000026</dato>
+      </accion>
+      <imagen>0000026</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+   <boton orden="12">
+      <label>Beb. Cola 400ml</label>
+      <accion funcion="">
+        <dato>0000023</dato>
+      </accion>
+      <imagen>0000023</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="13">
+      <label>Beb. Hidratan. Mandarina</label>
+      <accion funcion="">
+        <dato>0000131</dato>
+      </accion>
+      <imagen>0000131</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="14">
+      <label>Beb. Hidratan. Tropic.</label>
+      <accion funcion="">
+        <dato>0000130</dato>
+      </accion>
+      <imagen>0000130</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="15">
+      <label>Beb. Limón 400ml</label>
+      <accion funcion="">
+        <dato>0000043</dato>
+      </accion>
+      <imagen>0000043</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="16">
+      <label>Beb. Relaj. Frut. Amarill</label>
+      <accion funcion="">
+        <dato>0000365</dato>
+      </accion>
+      <imagen>0000365</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="17">
+      <label>Beb. Relaj. Frut. Verdes</label>
+      <accion funcion="">
+        <dato>0000364</dato>
+      </accion>
+      <imagen>0000364</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+    <boton orden="18">
+      <label>Beb. Roja 400ml</label>
+      <accion funcion="">
+        <dato>0000042</dato>
+      </accion>
+      <imagen>0000042</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="19">
+      <label>Beb. Uva 400ml</label>
+      <accion funcion="">
+        <dato>0000025</dato>
+      </accion>
+      <imagen>0000025</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="20">
+      <label>Coca Cola 400ml</label>
+      <accion funcion="">
+        <dato>0000020</dato>
+      </accion>
+      <imagen>0000020</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+    
+  <boton orden="21">
+      <label>Coca Cola zero 500ml</label>
+      <accion funcion="">
+        <dato>0000021</dato>
+      </accion>
+      <imagen>0000021</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="22">
+      <label>Colombiana Postobón pet</label>
+      <accion funcion="">
+        <dato>0000349</dato>
+      </accion>
+      <imagen>0000349</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+  <boton orden="23">
+      <label>Gatorade 500ml Tropic.</label>
+      <accion funcion="">
+        <dato>0000323</dato>
+      </accion>
+      <imagen>0000323</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="24">
+      <label>Jugo Naranja 500ml</label>
+      <accion funcion="">
+        <dato>0000015</dato>
+      </accion>
+      <imagen>0000015</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="25">
+      <label>Jugo Hatsu naranja 350ml</label>
+      <accion funcion="">
+        <dato>0000335</dato>
+      </accion>
+      <imagen>0000335</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+  <boton orden="26">
+      <label>Jugo Hatsu rosado 350ml</label>
+      <accion funcion="">
+        <dato>0000336</dato>
+      </accion>
+      <imagen>0000336</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+
+  <boton orden="27">
+      <label>Jugo Hatsu Amarillo</label>
+      <accion funcion="">
+        <dato>0000325</dato>
+      </accion>
+      <imagen>0000325</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="28">
+      <label>Jugo Hit pet500 mango</label>
+      <accion funcion="">
+        <dato>0000328</dato>
+      </accion>
+      <imagen>0000328</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="29">
+      <label>Jugo Hit pet naran-piñ</label>
+      <accion funcion="">
+        <dato>0000329</dato>
+      </accion>
+      <imagen>0000329</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="30">
+      <label>Jugo Hit pet Frut-Tropic.</label>
+      <accion funcion="">
+        <dato>0000330</dato>
+      </accion>
+      <imagen>0000080</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="31">
+      <label>Jugo Hit pet500 mora</label>
+      <accion funcion="">
+        <dato>0000322</dato>
+      </accion>
+      <imagen>0000322</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="32">
+      <label>Jugo Nectar frut.rojos</label>
+      <accion funcion="">
+        <dato>0000077</dato>
+      </accion>
+      <imagen>0000077</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="33">
+      <label>Jugo Nectar frut.verdes</label>
+      <accion funcion="">
+        <dato>0000078</dato>
+      </accion>
+      <imagen>0000078</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="34">
+      <label>Jugo Nectar naranj/zanaho</label>
+      <accion funcion="">
+        <dato>0000079</dato>
+      </accion>
+      <imagen>0000079</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+    
+  <boton orden="35">
+      <label>Limonada Arand-jamaica</label>
+      <accion funcion="">
+        <dato>0000137</dato>
+      </accion>
+      <imagen>0000137</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="36">
+      <label>Limonada lychee hierbb.</label>
+      <accion funcion="">
+        <dato>0000136</dato>
+      </accion>
+      <imagen>0000136</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+    
+  <boton orden="37">
+      <label>Manzana Beb.gaseosa</label>
+      <accion funcion="">
+        <dato>0000024</dato>
+      </accion>
+      <imagen>0000024</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+    
+  <boton orden="38">
+      <label>Manzana postobon pet</label>
+      <accion funcion="">
+        <dato>0000348</dato>
+      </accion>
+      <imagen>0000348</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+      
+  <boton orden="39">
+      <label>Mr Tea 300ml limón</label>
+      <accion funcion="">
+        <dato>0000327</dato>
+      </accion>
+      <imagen>0000327</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+
+  <boton orden="40">
+      <label>Mr. Tea 300ml Durazno</label>
+      <accion funcion="">
+        <dato>0000337</dato>
+      </accion>
+      <imagen>0000337</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+
+   <boton orden="41">
+      <label>Nectar Fruto Durazno</label>
+      <accion funcion="">
+        <dato>0000202</dato>
+      </accion>
+      <imagen>0000202</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+   <boton orden="42">
+      <label>Nectar Fruto Manzana</label>
+      <accion funcion="">
+        <dato>0000203</dato>
+      </accion>
+      <imagen>0000203</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+   <boton orden="43">
+      <label>Nectar Fruto Pera</label>
+      <accion funcion="">
+        <dato>0000204</dato>
+      </accion>
+      <imagen>0000204</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+   <boton orden="44">
+      <label>Pepsi Postobon pet</label>
+      <accion funcion="">
+        <dato>0000350</dato>
+      </accion>
+      <imagen>0000350</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="45">
+      <label>Pony malta pet400ml</label>
+      <accion funcion="">
+        <dato>0000087</dato>
+      </accion>
+      <imagen>0000087</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="46">
+      <label>Quatro 500ml</label>
+      <accion funcion="">
+        <dato>0000201</dato>
+      </accion>
+      <imagen>0000201</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="47">
+      <label>Sprite 500ml</label>
+      <accion funcion="">
+        <dato>0000200</dato>
+      </accion>
+      <imagen>0000200</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="48">
+      <label>Té Durazno</label>
+      <accion funcion="">
+        <dato>0000112</dato>
+      </accion>
+      <imagen>0000112</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>  
+  
+  <boton orden="49">
+      <label>Té Hatsu Amarillo</label>
+      <accion funcion="">
+        <dato>0000332</dato>
+      </accion>
+      <imagen>0000332</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="50">
+      <label>Té Hatsu Blanco 400ml</label>
+      <accion funcion="">
+        <dato>0000326</dato>
+      </accion>
+      <imagen>0000326</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="51">
+      <label>Té Hatsu Negro 400ml</label>
+      <accion funcion="">
+        <dato>0000334</dato>
+      </accion>
+      <imagen>0000334</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+    
+  <boton orden="52">
+      <label>Té Hatsu Rosado 400ml</label>
+      <accion funcion="">
+        <dato>0000333</dato>
+      </accion>
+      <imagen>0000333</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+  
+  <boton orden="53">
+      <label>Té limón</label>
+      <accion funcion="">
+        <dato>0000111</dato>
+      </accion>
+      <imagen>0000111</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria6</Categoria>
+    </boton>
+<!--Fin Categoria6 - nevera-->
+
+<!--Inicio Categoria7  -LACTEOS-->
+    <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria7</Categoria>
+    </boton>
+  
+    <boton orden="2">
+      <label>Avena Bolsas 200ml</label>
+      <accion funcion="">
+        <dato>0000047</dato>
+      </accion>
+      <imagen>0000047</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+    <boton orden="3">
+      <label>Leche de Almendras</label>
+      <accion funcion="">
+        <dato>0000113</dato>
+      </accion>
+      <imagen>0000113</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="4">
+      <label>Queso S/Relleno 40gr</label>
+      <accion funcion="">
+        <dato>0000040</dato>
+      </accion>
+      <imagen>0000040</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+    
+  <boton orden="5">
+      <label>Queso R/Bocadillo 65gr</label>
+      <accion funcion="">
+        <dato>0000039</dato>
+      </accion>
+      <imagen>0000039</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+      
+  <boton orden="6">
+      <label>Vaso Kumis 200gr</label>
+      <accion funcion="">
+        <dato>0000046</dato>
+      </accion>
+      <imagen>0000046</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  <boton orden="7">
+      <label>Yogourt aros-sabor 150gr</label>
+      <accion funcion="">
+        <dato>0000309</dato>
+      </accion>
+      <imagen>0000309</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="8">
+      <label>Yogourt aros-achocolatado</label>
+      <accion funcion="">
+        <dato>0000309</dato>
+      </accion>
+      <imagen>0000309</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+
+  <boton orden="9">
+      <label>Yogourt galleta negra</label>
+      <accion funcion="">
+        <dato>0000311</dato>
+      </accion>
+      <imagen>0000311</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="10">
+      <label>Yogourt Hojuelas-maíz</label>
+      <accion funcion="">
+        <dato>0000017</dato>
+      </accion>
+      <imagen>0000017</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+  
+  <boton orden="11">
+      <label>Yogourt Griego/Duraz</label>
+      <accion funcion="">
+        <dato>0000316</dato>
+      </accion>
+      <imagen>0000316</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+
+  <boton orden="12">
+      <label>Yogourt Griego Mora</label>
+      <accion funcion="">
+        <dato>0000317</dato>
+      </accion>
+      <imagen>0000317</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>  
+  
+  <boton orden="13">
+      <label>Yogourt Griego Natural</label>
+      <accion funcion="">
+        <dato>0000318</dato>
+      </accion>
+      <imagen>0000318</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>  
+  
+  <boton orden="14">
+      <label>Yogourt Feijoa</label>
+      <accion funcion="">
+        <dato>0000313</dato>
+      </accion>
+      <imagen>0000313</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>  
+  
+  <boton orden="15">
+      <label>Yogourt Frut. Rojos</label>
+      <accion funcion="">
+        <dato>0000016</dato>
+      </accion>
+      <imagen>0000016</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>  
+  
+  <boton orden="16">
+      <label>Yogourt Melocotón</label>
+      <accion funcion="">
+        <dato>0000312</dato>
+      </accion>
+      <imagen>0000312</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria7</Categoria>
+    </boton>
+<!--Fin Categoria7 LACTEOS-->
+  
+<!--INICO  Categoria8 *CONUMO*-->
+   <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+        <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="2">
+      <label>Arandanos 35gr</label>
+      <accion funcion="">
+        <dato>0000103</dato>
+      </accion>
+      <imagen>0000103</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton> 
+  
+     <boton orden="3">
+      <label>Barra Choco. LOK</label>
+      <accion funcion="">
+        <dato>0000135</dato>
+      </accion>
+      <imagen>0000135</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+  <boton orden="4">
+      <label>Barra Cereal-Banano</label>
+      <accion funcion="">
+        <dato>0000116</dato>
+      </accion>
+      <imagen>0000116</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+    
+  <boton orden="5">
+      <label>Barra Cereal Chips Choco.</label>
+      <accion funcion="">
+        <dato>0000115</dato>
+      </accion>
+      <imagen>0000115</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+      
+  <boton orden="6">
+      <label>Barra ceral piña/mango</label>
+      <accion funcion="">
+        <dato>0000114</dato>
+      </accion>
+      <imagen>0000114</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+  <boton orden="7">
+      <label>Barra Choco. con leche LOK</label>
+      <accion funcion="">
+        <dato>0000338</dato>
+      </accion>
+      <imagen>0000338</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+  <boton orden="8">
+      <label>Carne seca Criolla</label>
+      <accion funcion="">
+        <dato>0000110</dato>
+      </accion>
+      <imagen>0000110</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+    <boton orden="9">
+      <label>Carne seca Jalapeño</label>
+      <accion funcion="">
+        <dato>0000109</dato>
+      </accion>
+      <imagen>0000109</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+
+    <boton orden="10">
+      <label>Frut.Liofilizada Banano</label>
+      <accion funcion="">
+        <dato>0000083</dato>
+      </accion>
+      <imagen>0000083</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+
+   <boton orden="11">
+      <label>Frut.Liofilizada Mango</label>
+      <accion funcion="">
+        <dato>0000082</dato>
+      </accion>
+      <imagen>0000082</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="12">
+      <label>Frut.Liofilizada Uchuva</label>
+      <accion funcion="">
+        <dato>0000084</dato>
+      </accion>
+      <imagen>0000084</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="13">
+      <label>Galletas Alcaguete</label>
+      <accion funcion="">
+        <dato>0000060</dato>
+      </accion>
+      <imagen>0000060</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="14">
+      <label>Lb.Café grano Kumanday</label>
+      <accion funcion="">
+        <dato>0000038</dato>
+      </accion>
+      <imagen>0000038</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+  <boton orden="15">
+      <label>Lb.CaféTostao Kumanday</label>
+      <accion funcion="">
+        <dato>0000061</dato>
+      </accion>
+      <imagen>0000061</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+  <boton orden="16">
+      <label>Maní salado 50gr</label>
+      <accion funcion="">
+        <dato>0000101</dato>
+      </accion>
+      <imagen>0000101</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+    <boton orden="17">
+      <label>Mix nueces 50gr</label>
+      <accion funcion="">
+        <dato>0000102</dato>
+      </accion>
+      <imagen>0000102</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+    <boton orden="18">
+      <label>Snack Don chicharron</label>
+      <accion funcion="">
+        <dato>0000304</dato>
+      </accion>
+      <imagen>0000304</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+    <boton orden="19">
+      <label>Vino Blanco Chardonnay</label>
+      <accion funcion="">
+        <dato>0000105</dato>
+      </accion>
+      <imagen>0000105</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+    <boton orden="20">
+      <label>Vino Rosado</label>
+      <accion funcion="">
+        <dato>0000106</dato>
+      </accion>
+      <imagen>0000106</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="21">
+      <label>Vino Tinto Cabernet S.</label>
+      <accion funcion="">
+        <dato>0000107</dato>
+      </accion>
+      <imagen>0000107</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton>
+  
+   <boton orden="22">
+      <label>Vino Tinto Carmenere</label>
+      <accion funcion="">
+        <dato>0000108</dato>
+      </accion>
+      <imagen>0000108</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria8</Categoria>
+    </boton> 
+<!--FIN  Categoria8 *CONSUMO*-->
+
+
+  <!--INICO  Categoria9 *OTROS*-->
+     <boton orden="0">
+      <label></label>
+      <accion funcion="Volver">
+      <dato></dato>
+      </accion>
+      <imagen>ico_volver</imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+    <Categoria>Categoria9</Categoria>
+    </boton> 
+  
+   <boton orden="2">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria9</Categoria>
+    </boton>
+
+    <boton orden="3">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria9</Categoria>
+    </boton>
+  
+   <boton orden="4">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria9</Categoria>
+    </boton>
+  
+  <boton orden="4">
+      <label></label>
+      <accion funcion="">
+        <dato></dato>
+      </accion>
+      <imagen></imagen>
+      <over>ColorFondoOpciones</over>
+      <Enabled>1</Enabled>
+      <Categoria>Categoria9</Categoria>
+    </boton>
+  
+  <!--FIN  Categoria9 *OTROS*-->
+    
+
+  </teclado>
+
+ </tecladoTactil>

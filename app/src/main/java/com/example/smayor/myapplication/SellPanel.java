@@ -4,14 +4,15 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
-import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -28,6 +29,8 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     OperatorViewFragment operatorView;
     private float y1,y2;
     static final int MIN_DISTANCE = 150;
+    private static final String ns = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,20 +59,11 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
             e.printStackTrace();
         }
 
+        Toast.makeText(this, getScreenDensity() + "", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-    }
-
-    public void setListener(int viewId){
-        View myView = findViewById(viewId);
-        myView.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-                getGesture(event);
-                return true;
-            }
-        });
     }
 
     public void getGesture(MotionEvent event){
@@ -100,26 +94,46 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     }
 
     private void getXMLfromResource() throws IOException, XmlPullParserException {
-        // Create ResourceParser for XML file
-        XmlResourceParser xpp = getResources().getXml(R.xml.teclado_pos);
-        // check state
-        int eventType = xpp.getEventType();
-        while (eventType != XmlPullParser.END_DOCUMENT) {
-            // instead of the following if/else if lines
-            // you should custom parse your xml
-            if(eventType == XmlPullParser.START_DOCUMENT) {
-                System.out.println("Start document");
-            } else if(eventType == XmlPullParser.START_TAG) {
-                System.out.println("Start tag "+xpp.getName());
-            } else if(eventType == XmlPullParser.END_TAG) {
-                System.out.println("End tag "+xpp.getName());
-            } else if(eventType == XmlPullParser.TEXT) {
-                System.out.println("Text "+xpp.getText());
+        XmlPullParser parser = getResources().getXml(R.xml.teclado);
+        int eventType = -1;
+        while(eventType != XmlPullParser.END_DOCUMENT){
+            if(eventType == XmlPullParser.START_TAG){
+                String attr = parser.getName();
+
+                if(attr.equals("teclado")){
+                    System.out.println(parser.getAttributeCount() + "");
+                }
+
+                if(attr.equals("boton")){//Empieza el ciclo de lectura de XML en el botón
+                    System.out.println("Boton : ");
+                    eventType = parser.next();//Pasa a la siguiente linea inmediatamente
+                    attr = parser.getName();//Cambia el atributo attr por el nombre del siguiente atributo
+                    while(!attr.equals("boton")){//Se queda en el ciclo mientras no vuelva a repetirse la etiquieta boton, que sería la de finalizacion
+                        if(eventType == XmlPullParser.START_TAG){
+                            switch (parser.getName()){
+                                case "label":
+                                    System.out.println(parser.getName());
+                                    eventType = parser.next();
+                                    System.out.println("Text "+parser.getText());
+                                    break;
+                                case "imagen":
+                                    System.out.println(parser.getName());
+                                    eventType = parser.next();
+                                    System.out.println("Text "+parser.getText());
+                                    break;
+                            }
+                        }
+
+                        eventType = parser.next();
+
+                        if(eventType != XmlPullParser.TEXT)
+                            attr = parser.getName();
+                    }
+                }
             }
-            eventType = xpp.next();
+
+            eventType = parser.next();
         }
-        // indicate app done reading the resource.
-        xpp.close();
     }
 
     @Override
@@ -133,6 +147,18 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         Button b = (Button) view;
         String newText = b.getText().toString();
         sendText(newText);
+    }
+
+    public double getScreenDensity(){
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int width=dm.widthPixels;
+        int height=dm.heightPixels;
+        double wi=(double)width/(double)dm.xdpi;
+        double hi=(double)height/(double)dm.ydpi;
+        double x = Math.pow(wi,2);
+        double y = Math.pow(hi,2);
+        return(Math.sqrt(x+y));
     }
 
     public void deleteCharacter(View view) {
