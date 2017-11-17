@@ -19,6 +19,8 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
+import Classes.XMLButtonParser;
+
 public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFragmentInteractionListener, NotPayScreen.OnFragmentInteractionListener
         , TirillaDePagoFragment.OnFragmentInteractionListener, NumberPadFragment.OnFragmentInteractionListener, OperatorViewFragment.OnFragmentInteractionListener,
         NumberPadFragment.PayChange{
@@ -30,7 +32,6 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     private float y1,y2;
     static final int MIN_DISTANCE = 150;
     private static final String ns = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,9 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         addDynamicFragment(operatorView, R.id.operatorView);
 
         try {
-            getXMLfromResource();
+            XmlPullParser parser = getResources().getXml(R.xml.teclado);
+            XMLButtonParser buttonParser = new XMLButtonParser();
+            buttonParser.getXMLfromResource(parser,"ajuste");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XmlPullParserException e) {
@@ -90,49 +93,6 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
                     }
                 }
                 break;
-        }
-    }
-
-    private void getXMLfromResource() throws IOException, XmlPullParserException {
-        XmlPullParser parser = getResources().getXml(R.xml.teclado);
-        int eventType = -1;
-        while(eventType != XmlPullParser.END_DOCUMENT){
-            if(eventType == XmlPullParser.START_TAG){
-                String attr = parser.getName();
-
-                if(attr.equals("teclado")){
-                    System.out.println(parser.getAttributeCount() + "");
-                }
-
-                if(attr.equals("boton")){//Empieza el ciclo de lectura de XML en el botón
-                    System.out.println("Boton : ");
-                    eventType = parser.next();//Pasa a la siguiente linea inmediatamente
-                    attr = parser.getName();//Cambia el atributo attr por el nombre del siguiente atributo
-                    while(!attr.equals("boton")){//Se queda en el ciclo mientras no vuelva a repetirse la etiquieta boton, que sería la de finalizacion
-                        if(eventType == XmlPullParser.START_TAG){
-                            switch (parser.getName()){
-                                case "label":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
-                                    System.out.println("Text "+parser.getText());
-                                    break;
-                                case "imagen":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
-                                    System.out.println("Text "+parser.getText());
-                                    break;
-                            }
-                        }
-
-                        eventType = parser.next();
-
-                        if(eventType != XmlPullParser.TEXT)
-                            attr = parser.getName();
-                    }
-                }
-            }
-
-            eventType = parser.next();
         }
     }
 
