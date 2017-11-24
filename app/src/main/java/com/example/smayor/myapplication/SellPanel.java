@@ -25,7 +25,6 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         , TirillaDePagoFragment.OnFragmentInteractionListener, NumberPadFragment.OnFragmentInteractionListener, OperatorViewFragment.OnFragmentInteractionListener,
         NumberPadFragment.PayChange{
 
-    private static final String DEBUG_TAG = "";
     ButtonsFragment buttonsFragment;
     NumberPadFragment numberPadFragment;
     OperatorViewFragment operatorView;
@@ -61,7 +60,6 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         }
-
         Toast.makeText(this, getScreenDensity() + "", Toast.LENGTH_SHORT).show();
     }
 
@@ -70,11 +68,7 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     }
 
     public void getGesture(MotionEvent event){
-        boolean tirillaDePagoShowing = false;
-        TirillaDePagoFragment myFragment = (TirillaDePagoFragment)getFragmentManager().findFragmentByTag("TIRILLA_DE_PAGO");
-        if (myFragment != null && myFragment.isVisible()) {
-            tirillaDePagoShowing = true;
-        }
+        boolean tirillaDePagoShowing = fragmentIsShowing("TIRILLA_DE_PAGO");
         switch(event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 y1 = event.getY();
@@ -100,6 +94,12 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     public boolean dispatchTouchEvent(MotionEvent event) {
         getGesture(event);
         return super.dispatchTouchEvent(event);
+    }
+
+    //Muestro para confirmar si un fragment se está mostrando
+    public boolean fragmentIsShowing(String fragmentTag){
+        TirillaDePagoFragment myFragment = (TirillaDePagoFragment)getFragmentManager().findFragmentByTag(fragmentTag);
+        return (myFragment != null && myFragment.isVisible());
     }
 
     //Métodos de botones del NumberPad
@@ -162,10 +162,12 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         transaction.commit();
     }
 
-    //Método del botón
-    public void addTirilloDePagoFragment(View view) {
-        TirillaDePagoFragment tirillaDePago = new TirillaDePagoFragment();
-        replaceFragments(tirillaDePago, R.id.panel, "TIRILLA_DE_PAGO");
+    //Método del botón para mostrar la tirilla de pago
+    public void addTirilloDePagoFragment() {
+        if(!fragmentIsShowing("TIRILLA_DE_PAGO")){
+            TirillaDePagoFragment tirillaDePago = new TirillaDePagoFragment();
+            replaceFragments(tirillaDePago, R.id.panel, "TIRILLA_DE_PAGO");
+        }
         //Toast.makeText(this, "Prueba", Toast.LENGTH_SHORT).show();
     }
 }

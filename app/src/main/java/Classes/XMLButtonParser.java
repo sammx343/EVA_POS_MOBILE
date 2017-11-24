@@ -12,16 +12,17 @@ import java.util.ArrayList;
 
 public class XMLButtonParser {
 
-    ArrayList<Button> buttonsParser = new ArrayList<>();
-
     public ArrayList getXMLfromResource(XmlPullParser parser, String keyboardId) throws IOException, XmlPullParserException {
+        ArrayList<Button> buttonsParser = new ArrayList<>();
         int eventType = -1;
         boolean requiredKeyButton = false;
         while(eventType != XmlPullParser.END_DOCUMENT){
             if(eventType == XmlPullParser.START_TAG){
                 String elementName = parser.getName();
 
-                if(elementName.equals("teclado")){
+                if(elementName.equals("teclado")){//Revisa que el tag inicial sea teclado
+                    System.out.println("////ESTE ES UN TECLADO //////");
+                    System.out.println(parser.getAttributeValue(null, "id"));
                     requiredKeyButton = (parser.getAttributeValue(null, "id").equals(keyboardId))? true : false;
                     System.out.println(keyboardId);
                 }
@@ -37,44 +38,38 @@ public class XMLButtonParser {
                     String dato = "";
                     String over = "";
                     String enabled = "";
+                    String categoria = "";
                     while(!elementName.equals("boton")){//Se queda en el ciclo mientras no vuelva a repetirse la etiquieta boton, que sería la de finalizacion
-                        if(eventType == XmlPullParser.START_TAG){//Solo busca aquellos elementos que contengan la etiqueta de boton
+                        if(eventType == XmlPullParser.START_TAG){//Solo compara con aquellos elementos que contengan la etiqueta de inicio
                             switch (parser.getName()){
                                 case "label":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
+                                    parser.next();
                                     System.out.println(parser.getText());
                                     label = parser.getText();
                                     break;
                                 case "accion":
-                                    System.out.println(parser.getName());
-                                    System.out.println(parser.getAttributeValue(null, "funcion"));
                                     funcion = parser.getAttributeValue(null, "funcion");
-                                    eventType = parser.next();
+                                    parser.next();
                                     break;
                                 case "dato":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
+                                    parser.next();
                                     dato = parser.getText();
-                                    System.out.println(parser.getText());
                                     break;
                                 case "imagen":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
+                                    parser.next();
                                     imagen = parser.getText();
-                                    System.out.println(parser.getText());
                                     break;
                                 case "over":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
+                                    parser.next();
                                     over = parser.getText();
-                                    System.out.println(parser.getText());
                                     break;
                                 case "Enabled":
-                                    System.out.println(parser.getName());
-                                    eventType = parser.next();
+                                    parser.next();
                                     enabled = parser.getText();
-                                    System.out.println(parser.getText());
+                                    break;
+                                case "Categoria":
+                                    parser.next();
+                                    categoria = parser.getText();
                                     break;
                             }
                         }
@@ -82,15 +77,11 @@ public class XMLButtonParser {
                         if(eventType != XmlPullParser.TEXT) //Se necesita comparar el nombre de la siguiente etiqueta, solo se guarda si no es texto, ya que marcaría error
                             elementName = parser.getName();
                     }
-
-                    buttonsParser.add(new Button(order, label, funcion,imagen, dato, over, enabled ));
+                    buttonsParser.add(new Button(order, label, funcion,imagen, dato, over, enabled, categoria ));
                 }
             }
             eventType = parser.next();
         }
-
         return buttonsParser;
     }
-
-
 }
