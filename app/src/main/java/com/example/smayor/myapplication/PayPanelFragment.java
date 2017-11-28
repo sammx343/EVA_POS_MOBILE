@@ -25,5 +25,4 @@ public class PayPanelFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pay_panel, container, false);
     }
-
 }

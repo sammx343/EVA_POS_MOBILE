@@ -4,9 +4,207 @@
     android:layout_height="match_parent"
     tools:context="com.example.smayor.myapplication.PayPanelFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_weight="7"
+        android:weightSum="11"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="INGRESAR VALOR"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/articleCode"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="bottom"
+            android:padding="2dp"
+            android:text="$30.000"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="30sp"
+            android:layout_weight="1.5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Total"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="$26.450"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Saldo a pagar"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="$26.450"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="20sp" />
+        </LinearLayout>
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Medio Pago"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="20sp"
+                android:layout_gravity="left"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Valor Pagado"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="20sp"
+                android:gravity="right"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:background="@drawable/border">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Efectivo"
+                android:layout_weight="0.5"
+                android:textSize="16sp"
+                android:layout_gravity="left"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="$20.000"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:textSize="16sp"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="lmoto"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="Total"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="IVA"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="BASE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:text="IVA=19%"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="$40.550"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="$34.076"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="$6.474"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

@@ -21,10 +21,7 @@ public class XMLButtonParser {
                 String elementName = parser.getName();
 
                 if(elementName.equals("teclado")){//Revisa que el tag inicial sea teclado
-                    System.out.println("////ESTE ES UN TECLADO //////");
-                    System.out.println(parser.getAttributeValue(null, "id"));
                     requiredKeyButton = (parser.getAttributeValue(null, "id").equals(keyboardId))? true : false;
-                    System.out.println(keyboardId);
                 }
 
                 if(elementName.equals("boton") && requiredKeyButton){//Empieza el ciclo de lectura de XML en el botón
@@ -44,7 +41,7 @@ public class XMLButtonParser {
                             switch (parser.getName()){
                                 case "label":
                                     parser.next();
-                                    System.out.println(parser.getText());
+                                    //System.out.println(parser.getText());
                                     label = parser.getText();
                                     break;
                                 case "accion":

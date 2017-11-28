@@ -98,15 +98,18 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
 
     //Muestro para confirmar si un fragment se está mostrando
     public boolean fragmentIsShowing(String fragmentTag){
-        TirillaDePagoFragment myFragment = (TirillaDePagoFragment)getFragmentManager().findFragmentByTag(fragmentTag);
+        Fragment myFragment = getFragmentManager().findFragmentByTag(fragmentTag);
         return (myFragment != null && myFragment.isVisible());
     }
 
     //Métodos de botones del NumberPad
     public void onButtonClicked(View view) {
-        Button b = (Button) view;
-        String newText = b.getText().toString();
-        sendText(newText);
+        boolean tirillaDePagoShowing = fragmentIsShowing("TIRILLA_DE_PAGO");
+        if(!tirillaDePagoShowing){
+            Button b = (Button) view;
+            String newText = b.getText().toString();
+            sendText(newText);
+        }
     }
 
     public double getScreenDensity(){
@@ -122,7 +125,10 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
     }
 
     public void deleteCharacter(View view) {
-        deleteCharacter();
+        boolean tirillaDePagoShowing = fragmentIsShowing("TIRILLA_DE_PAGO");
+        if(!tirillaDePagoShowing){
+            deleteCharacter();
+        }
     }
 
     //Métodos de la interfaz de NumberPadFragment = Teclado Númerico
@@ -149,7 +155,6 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         transaction.add(fragmentId, fragment);
-
         transaction.commit();
     }
 
@@ -170,4 +175,5 @@ public class SellPanel extends FragmentActivity implements ButtonsFragment.OnFra
         }
         //Toast.makeText(this, "Prueba", Toast.LENGTH_SHORT).show();
     }
+
 }
